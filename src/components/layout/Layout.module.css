@@ -150,6 +150,41 @@
   padding-block: 10px;
 }
 
+.lang {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--color-bg-alt) 80%, transparent);
+}
+
+.lang button {
+  min-width: 40px;
+  padding: 6px 10px;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.lang button:hover {
+  color: var(--color-text);
+}
+
+.lang .langActive {
+  background: var(--color-surface);
+  color: var(--color-primary-strong);
+  box-shadow: 0 1px 3px rgb(13 20 26 / 0.08);
+}
+
 .menuButton {
   display: none;
   width: 44px;

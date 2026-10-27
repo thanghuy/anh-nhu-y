@@ -1,4 +1,4 @@
-// Content shared across pages. Images are served from the original site's CDN.
+// Shared, language-independent data (text lives in `src/i18n`). Images are served from the original site's CDN.
 const CDN = 'https://assets.zyrosite.com/cdn-cgi/image/format=auto'
 const ASSET = 'mePgjXK7ZjFw9elg'
 
@@ -21,28 +21,12 @@ export const CONTACT = {
   phoneHref: 'tel:+84986565675',
   hotlines: ['0913183797', '0365606897'],
   feedbackEmails: ['contact@anhnhuy.com', 'dtt220901@gmail.com'],
-  address: 'Đường TL 715, xã Hàm Thuận, tỉnh Lâm Đồng',
-  hours: '9h - 17h',
   facebook: 'https://www.facebook.com/lieu.oan.523024',
 }
 
 export const NAV = [
-  { to: '/', label: 'Trang chủ' },
-  { to: '/gioi-thieu', label: 'Giới thiệu' },
-  { to: '/san-pham', label: 'Sản phẩm' },
-  { to: '/lien-he', label: 'Liên hệ' },
-]
-
-export const STATS = [
-  { value: '200+', label: 'Nhân sự có kinh nghiệm' },
-  { value: '10+', label: 'Năm gia công thanh long' },
-  { value: '15+', label: 'Đối tác lâu dài' },
-  { value: '6', label: 'Khu vực thị trường xuất khẩu' },
-]
-
-export const MARKETS = ['Châu Âu', 'Mỹ', 'Nhật Bản', 'Trung Quốc', 'Trung Đông', 'Đông Nam Á']
-
-export const TESTIMONIALS = [
-  'Hợp tác nhiều lần, rất chuyên nghiệp, hàng đến đúng thời hạn.',
-  'Gia công đóng gói kĩ, đơn hàng linh hoạt quanh năm.',
-]
+  { to: '/', key: 'home' },
+  { to: '/gioi-thieu', key: 'about' },
+  { to: '/san-pham', key: 'products' },
+  { to: '/lien-he', key: 'contact' },
+] as const

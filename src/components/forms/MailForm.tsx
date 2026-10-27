@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
+import { useI18n } from '@/i18n/context'
 import styles from './MailForm.module.css'
 
 export interface MailField {
@@ -21,7 +22,8 @@ interface MailFormProps {
 }
 
 // The site has no form backend, so a submit opens the visitor's mail app with the message filled in.
-export function MailForm({ to, subject, fields, submitLabel = 'Gửi thông tin' }: MailFormProps) {
+export function MailForm({ to, subject, fields, submitLabel }: MailFormProps) {
+  const { t } = useI18n()
   const [values, setValues] = useState<Record<string, string>>({})
 
   const submit = (e: FormEvent) => {
@@ -54,9 +56,9 @@ export function MailForm({ to, subject, fields, submitLabel = 'Gửi thông tin'
           </label>
         )
       })}
-      <p className={styles.note}>Biểu mẫu sẽ mở ứng dụng email của bạn với nội dung đã điền sẵn.</p>
+      <p className={styles.note}>{t.form.note}</p>
       <Button type="submit" className={styles.submit}>
-        {submitLabel}
+        {submitLabel ?? t.form.submit}
         <Icon name="arrowRight" size={18} />
       </Button>
     </form>

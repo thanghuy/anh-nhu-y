@@ -1,0 +1,268 @@
+// Vietnamese is the source dictionary; its shape defines `Dict`, which every other language must match.
+export const vi = {
+  meta: {
+    home: 'Xuất khẩu trái cây tươi Việt Nam | Anh Như Ý',
+    about: 'Giới thiệu | Anh Như Ý',
+    products: 'Sản phẩm | Anh Như Ý',
+    contact: 'Liên hệ | Anh Như Ý',
+  },
+  nav: {
+    home: 'Trang chủ',
+    about: 'Giới thiệu',
+    products: 'Sản phẩm',
+    contact: 'Liên hệ',
+    main: 'Chính',
+    mobile: 'Di động',
+  },
+  common: {
+    getQuote: 'Nhận báo giá',
+    openMenu: 'Mở menu',
+    closeMenu: 'Đóng menu',
+    brandHome: 'Anh Như Ý, trang chủ',
+    language: 'Ngôn ngữ',
+    backToTop: 'Lên đầu trang',
+    messageFacebook: 'Nhắn tin qua Facebook',
+    call: 'Gọi',
+  },
+  contact: {
+    address: 'Đường TL 715, xã Hàm Thuận, tỉnh Lâm Đồng',
+    hours: '9h - 17h',
+  },
+  footer: {
+    tagline: 'Nhà cung cấp thanh long tươi uy tín từ Việt Nam, đạt chuẩn GlobalGAP và VietGAP.',
+    navigation: 'Điều hướng',
+    contact: 'Liên hệ',
+    hours: 'Giờ làm việc',
+    rights: 'Bảo lưu mọi quyền.',
+    slogan: 'Xuất khẩu trái cây tươi Việt Nam',
+  },
+  stats: [
+    { value: '200+', label: 'Nhân sự có kinh nghiệm' },
+    { value: '10+', label: 'Năm gia công thanh long' },
+    { value: '15+', label: 'Đối tác lâu dài' },
+    { value: '6', label: 'Khu vực thị trường xuất khẩu' },
+  ],
+  markets: ['Châu Âu', 'Mỹ', 'Nhật Bản', 'Trung Quốc', 'Trung Đông', 'Đông Nam Á'],
+  testimonials: {
+    eyebrow: 'Khách hàng nói gì',
+    title: 'Trải nghiệm của khách hàng',
+    lead: 'Sản phẩm thanh long tươi ngon, chất lượng tuyệt vời từ Anh Như Ý!',
+    stars: '5 trên 5 sao',
+    author: 'Khách hàng của Anh Như Ý',
+    items: [
+      'Hợp tác nhiều lần, rất chuyên nghiệp, hàng đến đúng thời hạn.',
+      'Gia công đóng gói kĩ, đơn hàng linh hoạt quanh năm.',
+    ],
+  },
+  cta: {
+    title: 'Sẵn sàng hợp tác cùng Anh Như Ý?',
+    text: 'Gửi yêu cầu để nhận báo giá thanh long và dừa xuất khẩu, phản hồi trong giờ làm việc.',
+    button: 'Liên hệ báo giá',
+  },
+  faq: {
+    title: 'Câu hỏi thường gặp',
+    leadBefore: 'Chưa thấy câu trả lời bạn cần?',
+    leadLink: 'Liên hệ với chúng tôi',
+    leadAfter: 'để được tư vấn trực tiếp.',
+    items: [
+      {
+        q: 'Anh Như Ý cung cấp sản phẩm gì?',
+        a: 'Chúng tôi chuyên xuất khẩu trái cây tươi chất lượng cao, đặc biệt là thanh long Bình Thuận, sản phẩm nổi tiếng của Việt Nam. Ngoài ra, chúng tôi đang mở rộng thêm các mặt hàng nông sản khác như dừa tươi, sầu riêng, đáp ứng nhu cầu đa dạng của khách hàng quốc tế.',
+      },
+      {
+        q: 'Thời gian giao hàng là bao lâu?',
+        a: 'Thời gian giao hàng thường từ 5 đến 10 ngày làm việc, tùy theo địa điểm nhận hàng và số lượng đơn đặt. Với những đơn hàng gấp, chúng tôi có thể sắp xếp linh hoạt để đảm bảo tiến độ.',
+      },
+      {
+        q: 'Có chính sách đổi trả không?',
+        a: 'Nếu sản phẩm không đạt tiêu chuẩn chất lượng như cam kết, khách hàng có thể yêu cầu đổi trả trong vòng 7 ngày kể từ khi nhận hàng.',
+      },
+      {
+        q: 'Sản phẩm có nguồn gốc từ đâu?',
+        a: 'Toàn bộ sản phẩm của chúng tôi được thu hoạch trực tiếp từ các vùng nông sản nổi tiếng tại Việt Nam, được canh tác theo các tiêu chuẩn như VietGAP, GlobalGAP, đảm bảo chất lượng và an toàn vệ sinh thực phẩm.',
+      },
+      {
+        q: 'Có hỗ trợ giao hàng không?',
+        a: 'Chúng tôi hỗ trợ giao hàng tận nơi cho khách hàng tại khu vực nội địa. Đối với khách quốc tế, hàng được vận chuyển theo các điều kiện thương mại quốc tế (Incoterms) bằng đường hàng không hoặc đường biển, tùy theo yêu cầu.',
+      },
+      {
+        q: 'Có thể đặt hàng trực tuyến không?',
+        a: 'Khách hàng có thể đặt hàng trực tuyến qua website chính thức hoặc liên hệ trực tiếp với đội ngũ kinh doanh của chúng tôi để được hỗ trợ nhanh chóng, thuận tiện.',
+      },
+    ],
+  },
+  form: {
+    submit: 'Gửi thông tin',
+    note: 'Biểu mẫu sẽ mở ứng dụng email của bạn với nội dung đã điền sẵn.',
+  },
+  home: {
+    eyebrow: 'Xuất khẩu trái cây tươi Việt Nam',
+    // The headline is split into three runs; the middle one gets the shimmer effect.
+    title: ['Thanh long tươi', 'chuẩn xuất khẩu', 'từ Bình Thuận'],
+    lead: 'Nguồn cung dồi dào, luôn sẵn sàng và cam kết chất lượng ổn định, đáp ứng mọi nhu cầu hợp tác B2B.',
+    viewProducts: 'Xem sản phẩm',
+    badges: ['GlobalGAP', 'VietGAP', 'Đóng gói theo yêu cầu'],
+    heroAlt: 'Nông dân thu hoạch thanh long trên vườn',
+    marketsCard: '6 khu vực thị trường',
+    marketsCardSub: 'Châu Âu, Mỹ, Nhật Bản…',
+    exportStandard: 'Chuẩn xuất khẩu',
+    reasonsEyebrow: 'Giá trị cốt lõi',
+    reasonsTitle: 'Vì sao nên chọn chúng tôi',
+    reasonsLead: 'Chuỗi cung ứng ổn định, kiểm soát chất lượng nghiêm ngặt và quy trình bảo quản hiện đại.',
+    reasons: [
+      {
+        title: 'Nguồn cung ổn định',
+        points: [
+          'Nguyên liệu từ các vùng trồng đạt chuẩn, sản lượng ổn định quanh năm.',
+          'Kho lạnh và logistics chuyên nghiệp giữ chất lượng suốt quá trình vận chuyển.',
+          'Giao hàng đúng lịch cam kết.',
+        ],
+      },
+      {
+        title: 'Cạnh tranh về giá',
+        points: [
+          'Chính sách đặc biệt cho các đơn hàng số lượng lớn.',
+          'Giá cả ổn định, minh bạch, không phát sinh chi phí ẩn.',
+          'Chi phí nhập khẩu hợp lý hơn, tăng biên lợi nhuận cho đối tác.',
+        ],
+      },
+      {
+        title: 'Thanh long chất lượng cao',
+        points: [
+          'Thu hoạch trực tiếp từ nông trại, chọn lọc theo tiêu chuẩn xuất khẩu.',
+          'Đảm bảo độ tươi, ngọt, màu sắc đẹp, không dập nát.',
+          'Sản phẩm đạt chứng nhận GlobalGAP.',
+        ],
+      },
+    ],
+    productsEyebrow: 'Sản phẩm',
+    productsTitle: 'Sản phẩm của chúng tôi',
+    productsLead:
+      'Thanh long ruột trắng, ruột đỏ và vỏ vàng đạt chứng nhận GlobalGAP, VietGAP, cùng dòng sản phẩm dừa tươi đang mở rộng.',
+    productsMore: 'Xem chi tiết sản phẩm',
+    learnMore: 'Tìm hiểu thêm',
+    products: [
+      {
+        name: 'Thanh long',
+        tag: 'Sản phẩm chủ lực',
+        alt: 'Thanh long đỏ xếp đầy nhà đóng gói',
+        text: 'Ruột trắng, ruột đỏ và vỏ vàng. Size 350 đến 650g/quả, đóng thùng carton 4 đến 18kg theo yêu cầu.',
+      },
+      {
+        name: 'Dừa tươi',
+        tag: 'Sản phẩm mới',
+        alt: 'Thùng carton dừa xuất khẩu cạnh trái dừa xanh',
+        text: 'Dừa nguyên trái và dừa non gọt “kim cương”, bảo quản lạnh 0 đến 2°C trong container.',
+      },
+    ],
+    commitEyebrow: 'Cam kết',
+    commitTitle: 'Tươi ngon, an toàn và đạt chuẩn quốc tế',
+    commitLead:
+      'Với hệ thống chuỗi cung ứng ổn định, kiểm soát chất lượng nghiêm ngặt và quy trình bảo quản hiện đại, chúng tôi cam kết mang đến sản phẩm tươi ngon, an toàn cho các thị trường khó tính nhất.',
+    storefrontAlt: 'Cửa hàng Anh Như Ý về đêm, biển hiệu sáng đèn',
+    marketsLabel: 'Thị trường xuất khẩu',
+    achievementsEyebrow: 'Thành tựu',
+    achievementsTitle: 'Thành tựu tiêu biểu',
+    achievements: [
+      '1 trong 100 gương mặt nhà nông tiêu biểu cả nước, nhận danh hiệu Nông dân Việt Nam xuất sắc 2023',
+      'Vinh dự được Quyền Chủ tịch nước Nguyễn Thị Ánh Xuân ghé thăm',
+      'Tiếp đón nhiều đoàn khách du lịch tham quan vườn và cơ sở sản xuất',
+    ],
+  },
+  about: {
+    eyebrow: 'Giới thiệu',
+    title: 'Chào bạn đến với Anh Như Ý',
+    lead: 'Doanh nghiệp uy tín trong lĩnh vực xuất khẩu trái cây tươi, đặc biệt là thanh long Việt Nam.',
+    storyEyebrow: 'Về chúng tôi',
+    storyTitle: 'Từ vườn thanh long Bình Thuận đến thị trường quốc tế',
+    // Bold phrases are kept as separate strings so the markup stays in the component.
+    story1: [
+      'Chúng tôi chuyên cung cấp và đóng gói ',
+      'thanh long ruột trắng, ruột đỏ và thanh long vỏ vàng',
+      ' đạt tiêu chuẩn ',
+      'GlobalGAP, VietGAP',
+      ' để phục vụ các thị trường khó tính.',
+    ],
+    story2: [
+      'Với hệ thống ',
+      'chuỗi cung ứng ổn định',
+      ', ',
+      'kiểm soát chất lượng nghiêm ngặt',
+      ' và ',
+      'quy trình bảo quản hiện đại',
+      ', chúng tôi cam kết mang đến cho khách hàng sản phẩm tươi ngon, an toàn và đạt chuẩn quốc tế.',
+    ],
+    directionEyebrow: 'Định hướng',
+    directionTitle: 'Sứ mệnh và tầm nhìn',
+    mission: 'Sứ mệnh',
+    missionText: [
+      'Mang nông sản Việt Nam chất lượng cao, tươi ngon và an toàn đến với khách hàng toàn cầu, đồng thời ',
+      'thúc đẩy phát triển bền vững',
+      ' cho nông dân và cộng đồng địa phương.',
+    ],
+    vision: 'Tầm nhìn',
+    visionPoints: [
+      'Trở thành đối tác tin cậy, mang nông sản Việt ra thế giới.',
+      'Không ngừng đổi mới để nâng cao chất lượng và giá trị bền vững.',
+      'Xây dựng thương hiệu xanh, gắn kết cộng đồng và phát triển lâu dài.',
+    ],
+  },
+  products: {
+    eyebrow: 'Sản phẩm',
+    title: 'Trái cây tươi chuẩn xuất khẩu',
+    lead: 'Thanh long Bình Thuận, niềm tự hào của “thủ phủ thanh long” Việt Nam, và dừa tươi, sản phẩm chiến lược tiếp theo.',
+    categories: 'Danh mục sản phẩm',
+    dragonFruit: 'Thanh long',
+    coconut: 'Dừa tươi',
+    flagship: 'Sản phẩm chủ lực',
+    dragonFruitText:
+      'Nhắc đến Bình Thuận, người ta nghĩ ngay đến những vườn thanh long xanh mướt, trải dài bạt ngàn. Với diện tích và sản lượng hàng đầu cả nước, thanh long Bình Thuận góp phần quan trọng vào kinh tế nông nghiệp địa phương và là điểm đến hấp dẫn cho du khách.',
+    varieties: ['Ruột trắng', 'Ruột đỏ', 'Vỏ vàng'],
+    gallery: [
+      'Thanh long đỏ xếp đầy nhà đóng gói',
+      'Pallet thùng carton thanh long xếp cao trong kho',
+      'Nông dân cầm chùm thanh long đỏ trên vườn',
+    ],
+    dragonFruitSpecs: [
+      { label: 'Đặc điểm nổi bật', value: 'Hàng đẹp 100%, đạt chuẩn xuất khẩu' },
+      { label: 'Size nhỏ', value: '350 đến 450g/quả' },
+      { label: 'Size lớn', value: '450 đến 650g/quả' },
+      { label: 'Quy cách đóng gói', value: 'Thùng carton 4kg, 9kg, 16kg, 16,5kg hoặc 18kg. Có thể điều chỉnh theo yêu cầu' },
+      { label: 'Thời gian giao hàng', value: '7 đến 10 ngày làm việc' },
+    ],
+    newProduct: 'Sản phẩm mới, cơ hội mới',
+    coconutText:
+      'Bên cạnh thế mạnh về thanh long, chúng tôi đang đẩy mạnh phát triển dừa tươi: loại nông sản giàu giá trị dinh dưỡng, có tiềm năng xuất khẩu lớn và được ưa chuộng tại nhiều thị trường quốc tế. Với kinh nghiệm quản lý chất lượng và hệ thống cung ứng sẵn có, dừa sẽ là sản phẩm chiến lược tiếp theo của Anh Như Ý.',
+    coconutSpecs: [
+      { label: 'Đặc điểm nổi bật', value: 'Hàng đẹp 100%, đạt chuẩn xuất khẩu' },
+      {
+        label: 'Quy cách đóng gói',
+        value:
+          'Thùng carton 5 hoặc 7 lớp; dừa nguyên trái cho vào túi đay hoặc bao tải trước khi đặt vào thùng, hoặc dừa non gọt “kim cương” đóng gói theo tiêu chuẩn vệ sinh nghiêm ngặt',
+      },
+      { label: 'Bảo quản', value: 'Container lạnh 0 đến 2°C, độ ẩm 50 đến 60%, có thông gió' },
+      { label: 'Thời gian giao hàng', value: '7 đến 10 ngày làm việc' },
+    ],
+    coconutAlt: 'Thùng carton dừa xuất khẩu cạnh trái dừa xanh',
+  },
+  contactPage: {
+    eyebrow: 'Liên hệ',
+    title: 'Liên hệ với chúng tôi',
+    lead: 'Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn về các sản phẩm trái cây tươi chất lượng cao của Việt Nam.',
+    support: 'Hỗ trợ',
+    email: 'Email',
+    address: 'Địa chỉ',
+    hours: 'Giờ làm việc',
+    formTitle: 'Gửi yêu cầu báo giá',
+    formIntro: 'Cho chúng tôi biết sản phẩm, số lượng và thị trường bạn quan tâm.',
+    subject: 'Liên hệ từ website Anh Như Ý',
+    name: 'Tên của bạn',
+    namePlaceholder: 'Nguyễn Văn A',
+    emailLabel: 'Email liên hệ',
+    emailPlaceholder: 'ban@congty.com',
+    message: 'Nội dung tin nhắn',
+    messagePlaceholder: 'Sản phẩm, số lượng, thị trường…',
+  },
+}
+
+export type Dict = typeof vi

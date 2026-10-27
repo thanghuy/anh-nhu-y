@@ -3,7 +3,8 @@ import { ButtonLink } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import { SplitWords } from '@/components/ui/SplitWords'
 import { useCountUp } from '@/hooks/useCountUp'
-import { CONTACT, STATS, TESTIMONIALS } from '@/lib/site'
+import { useI18n } from '@/i18n/context'
+import { CONTACT } from '@/lib/site'
 import styles from './Sections.module.css'
 
 interface PageHeroProps {
@@ -42,9 +43,10 @@ function Stat({ value, label }: { value: string; label: string }) {
 }
 
 export function StatsBar() {
+  const { t } = useI18n()
   return (
     <dl className={`${styles.stats} glare`} data-reveal="stagger" data-tilt="3">
-      {STATS.map((s) => (
+      {t.stats.map((s) => (
         <Stat key={s.label} {...s} />
       ))}
     </dl>
@@ -52,24 +54,25 @@ export function StatsBar() {
 }
 
 export function Testimonials() {
+  const { t } = useI18n()
   return (
     <section className="section">
       <div className="container">
         <div className="sectionHead sectionHead--center" data-reveal>
-          <span className="eyebrow">Khách hàng nói gì</span>
-          <h2>Trải nghiệm của khách hàng</h2>
-          <p className="lead">Sản phẩm thanh long tươi ngon, chất lượng tuyệt vời từ Anh Như Ý!</p>
+          <span className="eyebrow">{t.testimonials.eyebrow}</span>
+          <h2>{t.testimonials.title}</h2>
+          <p className="lead">{t.testimonials.lead}</p>
         </div>
         <div className={styles.quotes} data-reveal="stagger">
-          {TESTIMONIALS.map((t) => (
-            <figure key={t} className={`${styles.quote} glare`} data-tilt="7">
-              <div className={styles.stars} aria-label="5 trên 5 sao">
+          {t.testimonials.items.map((q) => (
+            <figure key={q} className={`${styles.quote} glare`} data-tilt="7">
+              <div className={styles.stars} aria-label={t.testimonials.stars}>
                 {Array.from({ length: 5 }, (_, i) => (
                   <Icon key={i} name="star" size={18} />
                 ))}
               </div>
-              <blockquote>“{t}”</blockquote>
-              <figcaption>Khách hàng của Anh Như Ý</figcaption>
+              <blockquote>“{q}”</blockquote>
+              <figcaption>{t.testimonials.author}</figcaption>
             </figure>
           ))}
         </div>
@@ -79,17 +82,18 @@ export function Testimonials() {
 }
 
 export function CtaBand() {
+  const { t } = useI18n()
   return (
     <section className={`container ${styles.ctaWrap}`}>
       <div className={`${styles.cta} glare`} data-reveal="zoom" data-tilt="4">
         <span className={styles.ctaGlow} aria-hidden="true" />
         <div className={styles.ctaText}>
-          <h2>Sẵn sàng hợp tác cùng Anh Như Ý?</h2>
-          <p>Gửi yêu cầu để nhận báo giá thanh long và dừa xuất khẩu, phản hồi trong giờ làm việc.</p>
+          <h2>{t.cta.title}</h2>
+          <p>{t.cta.text}</p>
         </div>
         <div className={styles.ctaActions}>
           <ButtonLink to="/lien-he" variant="light">
-            Liên hệ báo giá
+            {t.cta.button}
             <Icon name="arrowRight" size={18} />
           </ButtonLink>
           <a className={styles.ctaPhone} href={CONTACT.phoneHref}>
