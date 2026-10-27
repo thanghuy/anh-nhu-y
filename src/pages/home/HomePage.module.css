@@ -114,9 +114,17 @@
   transform: translateZ(2px);
 }
 
+/* No cursor on touch screens: the stage sways on its own (scroll drives --rx, this drives --ry) */
+@media (hover: none) and (prefers-reduced-motion: no-preference) {
+  .heroStage {
+    animation: sway 7s ease-in-out infinite;
+  }
+}
+
 .heroFrame {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
   border-radius: var(--radius-lg);
   box-shadow:
     0 30px 60px -20px rgb(13 20 26 / 0.35),
@@ -289,6 +297,9 @@
 .productMedia {
   position: relative;
   overflow: hidden;
+  /* The parallax image is composited on its own layer, which escapes overflow + border-radius
+     clipping on a transformed card; clip-path keeps the rounded top corners. */
+  clip-path: inset(0 round calc(var(--radius-card) - 1px) calc(var(--radius-card) - 1px) 0 0);
 }
 
 .productMedia img {
@@ -361,6 +372,7 @@
 
 .commitMedia {
   overflow: hidden;
+  isolation: isolate;
   border-radius: var(--radius-lg);
   box-shadow: 0 30px 60px -24px rgb(13 20 26 / 0.35);
 }
@@ -514,5 +526,15 @@
 @keyframes spin {
   to {
     --spin: 360deg;
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    --ry: -12deg;
+  }
+  50% {
+    --ry: 12deg;
   }
 }

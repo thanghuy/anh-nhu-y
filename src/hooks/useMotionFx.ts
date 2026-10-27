@@ -4,8 +4,12 @@ import { useEffect } from 'react'
 // - `[data-tilt]` (optional max angle, default 8): sets --rx/--ry (deg) and --mx/--my (glare position, %)
 // - `[data-magnetic]`: nudges the element toward the cursor with the `translate` property
 // - `[data-parallax]`: sets --px/--py (-1..1) so layered children can shift by depth
-// Skipped on touch devices and when the visitor prefers reduced motion.
+// Touch devices have no cursor, so there the same variables follow scroll position (and the
+// device tilt where the browser exposes it without a permission prompt). All of it is skipped
+// when the visitor prefers reduced motion.
 export function useMotionFx() {
+  useTouchFx()
+
   useEffect(() => {
     if (
       !window.matchMedia('(hover: hover) and (pointer: fine)').matches ||
@@ -86,6 +90,70 @@ export function useMotionFx() {
       cancelAnimationFrame(frame)
       document.removeEventListener('pointermove', onMove)
       document.documentElement.removeEventListener('pointerleave', onLeave)
+    }
+  }, [])
+}
+
+function useTouchFx() {
+  useEffect(() => {
+    if (
+      window.matchMedia('(hover: hover) and (pointer: fine)').matches ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    ) {
+      return
+    }
+
+    let frame = 0
+    const clamp = (n: number) => Math.max(-1, Math.min(1, n))
+
+    // Each tilt element leans back while below the middle of the screen and forward once past it,
+    // with the glare sweeping across, so cards swing through 3D as they scroll by.
+    const update = () => {
+      frame = 0
+      const vh = window.innerHeight
+      for (const el of document.querySelectorAll<HTMLElement>('[data-tilt]')) {
+        const r = el.getBoundingClientRect()
+        if (r.bottom < -100 || r.top > vh + 100) continue
+        const t = clamp((r.top + r.height / 2 - vh / 2) / (vh / 2))
+        const max = (Number(el.dataset.tilt) || 8) * 1.6
+        el.classList.toggle('is-tilting', Math.abs(t) < 0.85)
+        el.style.setProperty('--rx', `${(t * max).toFixed(2)}deg`)
+        el.style.setProperty('--my', `${(50 + t * 60).toFixed(1)}%`)
+        el.style.setProperty('--mx', `${(50 - t * 30).toFixed(1)}%`)
+      }
+      for (const el of document.querySelectorAll<HTMLElement>('[data-parallax]')) {
+        const r = el.getBoundingClientRect()
+        if (r.bottom < 0 || r.top > vh) continue
+        el.style.setProperty('--py', clamp(-r.top / (r.height / 2)).toFixed(3))
+      }
+    }
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update)
+    }
+
+    // Android exposes device orientation freely; iOS needs a permission prompt, so it is left out.
+    const needsPermission =
+      typeof DeviceOrientationEvent !== 'undefined' &&
+      'requestPermission' in DeviceOrientationEvent
+    const onOrient = (e: DeviceOrientationEvent) => {
+      if (e.gamma == null) return
+      const px = clamp(e.gamma / 30).toFixed(3)
+      for (const el of document.querySelectorAll<HTMLElement>('[data-parallax]')) el.style.setProperty('--px', px)
+    }
+
+    update()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    window.addEventListener('resize', onScroll)
+    if (!needsPermission) window.addEventListener('deviceorientation', onOrient)
+    // Pages render after navigation without a scroll event, so refresh on DOM changes too.
+    const mo = new MutationObserver(onScroll)
+    mo.observe(document.body, { childList: true, subtree: true })
+    return () => {
+      cancelAnimationFrame(frame)
+      mo.disconnect()
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onScroll)
+      window.removeEventListener('deviceorientation', onOrient)
     }
   }, [])
 }
