@@ -296,7 +296,10 @@ textarea {
 /* Motion: scroll reveal ([data-reveal]) and staggered children ([data-reveal="stagger"]).
    Reveals run as keyframe animations on the individual translate/rotate/scale properties, so they
    never override a component's own `transform` or `transition` (hover tilt and lift keep working).
-   Hidden states only apply when the visitor allows motion, so content never stays invisible. */
+   Hidden states only apply when the visitor allows motion, so content never stays invisible.
+   One-shot animations fill `backwards`, not `both`: a forwards fill keeps the 3D transform/filter
+   alive after the animation ends, and Safari then keeps each element (even the whole <main>) on an
+   untiled 3D layer that intermittently paints blank while scrolling. */
 @media (prefers-reduced-motion: no-preference) {
   :has(> [data-reveal]),
   [data-reveal='stagger'] {
@@ -313,7 +316,7 @@ textarea {
   }
 
   [data-reveal].is-visible {
-    animation: revealUp 1s var(--ease) both;
+    animation: revealUp 1s var(--ease) backwards;
     animation-delay: var(--delay, 0ms);
   }
 
@@ -334,7 +337,7 @@ textarea {
   }
 
   [data-reveal='stagger'].is-visible > * {
-    animation: revealFlip 1s var(--ease) both;
+    animation: revealFlip 1s var(--ease) backwards;
   }
 
   [data-reveal='stagger'] > :nth-child(2) { animation-delay: 90ms; }
@@ -363,19 +366,19 @@ textarea {
 
   .is-visible .word {
     opacity: 1;
-    animation: wordIn 1s var(--ease) both;
+    animation: wordIn 1s var(--ease) backwards;
     animation-delay: calc(var(--i, 0) * 70ms + 150ms);
   }
 
   .is-visible .shimmer-text .word {
     animation:
-      wordIn 1s var(--ease) both,
+      wordIn 1s var(--ease) backwards,
       shimmer 5s ease-in-out infinite;
     animation-delay: calc(var(--i, 0) * 70ms + 150ms), 1.4s;
   }
 
   .page-enter {
-    animation: pageIn 0.7s var(--ease) both;
+    animation: pageIn 0.7s var(--ease) backwards;
   }
 
   /* Smooth open/close for native <details> where the browser supports it */
