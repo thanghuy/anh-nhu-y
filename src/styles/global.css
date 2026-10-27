@@ -1,0 +1,507 @@
+:root {
+  color-scheme: light;
+
+  /* Brand green from anhnhuy.com — single source of truth */
+  --color-primary: #31a050;
+  --color-primary-strong: #23803c;
+  --color-primary-soft: #eef8e8;
+  --color-accent: #7ed957;
+  --color-accent-soft: #a2e187;
+  --color-navy: #2c3f97;
+  /* Decorative fruit tones for 3D orbs and rings */
+  --color-fruit: #e0447c;
+  --color-sun: #f2c94c;
+
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5faf2;
+  --color-surface: #ffffff;
+  --color-text: #1d1e20;
+  --color-muted: #555a57;
+  --color-border: #e4ebe1;
+  --color-dark: #0d141a;
+  --color-on-dark: #e9f0ea;
+  --color-on-dark-muted: #9aa8a0;
+
+  --radius-card: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-card: 0 1px 2px rgb(13 20 26 / 0.04), 0 8px 24px rgb(13 20 26 / 0.06);
+  --shadow-lift: 0 2px 4px rgb(13 20 26 / 0.05), 0 16px 40px rgb(13 20 26 / 0.1);
+
+  --font-sans: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Montserrat', var(--font-sans);
+
+  /* Type scale tuned for Vietnamese: stacked diacritics (ễ, ậ, Ể) need roomier line-heights and
+     no text below 14px. Body 16px / 1.7, headings >= 1.3 so marks never clip or touch the line above. */
+  --text-xs: 0.875rem; /* 14px, the minimum */
+  --text-sm: 0.9375rem; /* 15px */
+  --text-base: 1rem; /* 16px */
+  --text-md: 1.0625rem; /* 17px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --leading-body: 1.7;
+  --leading-snug: 1.5;
+  --leading-heading: 1.3;
+  --leading-display: 1.25;
+
+  --container: 1200px;
+  --gutter: 24px;
+  --section-y: clamp(64px, 9vw, 112px);
+  --header-h: 72px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-primary: #4cbb68;
+    --color-primary-strong: #7ed957;
+    --color-primary-soft: #14261a;
+    --color-bg: #0d141a;
+    --color-bg-alt: #111b20;
+    --color-surface: #151f25;
+    --color-text: #eef3ef;
+    --color-muted: #a3b0a8;
+    --color-border: #22312a;
+    --color-dark: #080d11;
+    --shadow-card: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.3);
+    --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.3), 0 16px 40px rgb(0 0 0 / 0.4);
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gutter: 16px;
+    --header-h: 64px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: var(--leading-heading);
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2rem, 3.6vw + 0.75rem, 3.5rem);
+  line-height: var(--leading-display);
+}
+
+h2 {
+  font-size: clamp(1.625rem, 2vw + 0.85rem, 2.5rem);
+}
+
+h3 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-accent) 40%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Shared layout helpers */
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section {
+  padding-block: var(--section-y);
+}
+
+.section--alt {
+  background: var(--color-bg-alt);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  line-height: var(--leading-snug);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-primary-strong);
+}
+
+.eyebrow::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-accent);
+}
+
+.lead {
+  font-size: clamp(var(--text-md), 0.4vw + 0.95rem, 1.1875rem);
+  line-height: var(--leading-body);
+  color: var(--color-muted);
+  max-width: 60ch;
+}
+
+.sectionHead {
+  display: grid;
+  gap: 14px;
+  max-width: 720px;
+  margin-bottom: clamp(32px, 5vw, 56px);
+}
+
+.sectionHead--center {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* Pointer-driven custom properties (set by useMotionFx). Registered so they animate smoothly. */
+@property --px {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --py {
+  syntax: '<number>';
+  inherits: true;
+  initial-value: 0;
+}
+
+@property --lift {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 0px;
+}
+
+@property --spin {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --rx {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@property --ry {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* 3D tilt: components compose `var(--tilt)` into their own transform (and list --rx/--ry in their own
+   transition) so hover lifts keep working. The glare layer follows the cursor via --mx/--my. */
+[data-tilt] {
+  --tilt: perspective(1000px) rotateX(var(--rx)) rotateY(var(--ry));
+}
+
+.glare {
+  position: relative;
+}
+
+.glare::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+  background: radial-gradient(
+    420px circle at var(--mx, 50%) var(--my, 50%),
+    rgb(255 255 255 / 0.32),
+    rgb(255 255 255 / 0.06) 35%,
+    transparent 60%
+  );
+  mix-blend-mode: soft-light;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.glare.is-tilting::after {
+  opacity: 1;
+}
+
+/* Motion: scroll reveal ([data-reveal]) and staggered children ([data-reveal="stagger"]).
+   Reveals run as keyframe animations on the individual translate/rotate/scale properties, so they
+   never override a component's own `transform` or `transition` (hover tilt and lift keep working).
+   Hidden states only apply when the visitor allows motion, so content never stays invisible. */
+@media (prefers-reduced-motion: no-preference) {
+  :has(> [data-reveal]),
+  [data-reveal='stagger'] {
+    perspective: 1400px;
+  }
+
+  [data-reveal]:not(.is-visible),
+  [data-reveal='stagger']:not(.is-visible) > * {
+    opacity: 0;
+  }
+
+  [data-reveal='stagger']:not(.is-visible) {
+    opacity: 1;
+  }
+
+  [data-reveal].is-visible {
+    animation: revealUp 1s var(--ease) both;
+    animation-delay: var(--delay, 0ms);
+  }
+
+  [data-reveal='left'].is-visible {
+    animation-name: revealLeft;
+  }
+
+  [data-reveal='right'].is-visible {
+    animation-name: revealRight;
+  }
+
+  [data-reveal='zoom'].is-visible {
+    animation-name: revealZoom;
+  }
+
+  [data-reveal='stagger'].is-visible {
+    animation: none;
+  }
+
+  [data-reveal='stagger'].is-visible > * {
+    animation: revealFlip 1s var(--ease) both;
+  }
+
+  [data-reveal='stagger'] > :nth-child(2) { animation-delay: 90ms; }
+  [data-reveal='stagger'] > :nth-child(3) { animation-delay: 180ms; }
+  [data-reveal='stagger'] > :nth-child(4) { animation-delay: 270ms; }
+  [data-reveal='stagger'] > :nth-child(5) { animation-delay: 360ms; }
+  [data-reveal='stagger'] > :nth-child(6) { animation-delay: 450ms; }
+  [data-reveal='stagger'] > :nth-child(7) { animation-delay: 540ms; }
+  [data-reveal='stagger'] > :nth-child(8) { animation-delay: 630ms; }
+
+  /* Eyebrow rule draws itself in */
+  [data-reveal] .eyebrow::before {
+    width: 0;
+    transition: width 0.8s var(--ease) 0.25s;
+  }
+
+  .is-visible .eyebrow::before {
+    width: 20px;
+  }
+
+  /* Headline words flip up one by one (see <SplitWords />) */
+  [data-reveal] .word {
+    opacity: 0;
+    transform-origin: 50% 100%;
+  }
+
+  .is-visible .word {
+    opacity: 1;
+    animation: wordIn 1s var(--ease) both;
+    animation-delay: calc(var(--i, 0) * 70ms + 150ms);
+  }
+
+  .is-visible .shimmer-text .word {
+    animation:
+      wordIn 1s var(--ease) both,
+      shimmer 5s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 70ms + 150ms), 1.4s;
+  }
+
+  .page-enter {
+    animation: pageIn 0.7s var(--ease) both;
+  }
+
+  /* Smooth open/close for native <details> where the browser supports it */
+  :root {
+    interpolate-size: allow-keywords;
+  }
+
+  details::details-content {
+    block-size: 0;
+    overflow: clip;
+    transition:
+      block-size 0.35s var(--ease),
+      content-visibility 0.35s allow-discrete;
+  }
+
+  details[open]::details-content {
+    block-size: auto;
+  }
+
+  /* Scroll-driven parallax for photos, where the browser supports it */
+  @supports (animation-timeline: view()) {
+    .parallax-img {
+      scale: 1.14;
+      animation: parallaxY linear both;
+      animation-timeline: view();
+    }
+  }
+}
+
+.word {
+  display: inline-block;
+}
+
+.shimmer-text .word {
+  /* Extra paint area so background-clipped diacritics (ẩ, ấ) are not cut off */
+  padding-block: 0.12em;
+  margin-block: -0.12em;
+  color: var(--color-primary);
+  background: linear-gradient(100deg, var(--color-primary) 20%, var(--color-accent) 45%, var(--color-primary-strong) 70%);
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    translate: 0 48px;
+    rotate: x 22deg;
+    filter: blur(6px);
+  }
+}
+
+@keyframes revealLeft {
+  from {
+    opacity: 0;
+    translate: -72px 0;
+    rotate: y 18deg;
+    filter: blur(6px);
+  }
+}
+
+@keyframes revealRight {
+  from {
+    opacity: 0;
+    translate: 72px 0;
+    rotate: y -18deg;
+    filter: blur(6px);
+  }
+}
+
+@keyframes revealZoom {
+  from {
+    opacity: 0;
+    scale: 0.86;
+    rotate: x 14deg;
+  }
+}
+
+@keyframes revealFlip {
+  from {
+    opacity: 0;
+    translate: 0 72px;
+    rotate: x 38deg;
+    scale: 0.94;
+  }
+}
+
+@keyframes wordIn {
+  from {
+    opacity: 0;
+    transform: perspective(600px) translateY(40%) rotateX(-85deg);
+  }
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+    transform: perspective(1600px) translateY(24px) rotateX(4deg);
+  }
+}
+
+@keyframes parallaxY {
+  from {
+    translate: 0 -7%;
+  }
+  to {
+    translate: 0 7%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

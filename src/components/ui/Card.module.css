@@ -1,0 +1,80 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: clamp(22px, 2.5vw, 32px);
+  transform-style: preserve-3d;
+  transform: var(--tilt, none) translateY(var(--lift, 0px));
+  transition:
+    --rx 0.4s var(--ease),
+    --ry 0.4s var(--ease),
+    --lift 0.4s var(--ease),
+    box-shadow 0.3s var(--ease),
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  --lift: -6px;
+  box-shadow: var(--shadow-lift);
+  border-color: color-mix(in srgb, var(--color-primary) 40%, var(--color-border));
+}
+
+.highlight {
+  background:
+    radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--color-accent) 45%, transparent), transparent 60%),
+    var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.highlight:hover {
+  border-color: var(--color-primary);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-card);
+  background: var(--color-primary-soft);
+  color: var(--color-primary-strong);
+  margin-bottom: 20px;
+  transform: translateZ(36px);
+  box-shadow: 0 10px 20px -10px color-mix(in srgb, var(--color-primary) 60%, transparent);
+  transition: transform 0.5s var(--ease);
+}
+
+.card:hover .icon {
+  transform: translateZ(56px) rotateY(-12deg) rotateZ(-6deg);
+}
+
+.title {
+  transform: translateZ(20px);
+}
+
+.highlight .icon {
+  background: rgb(255 255 255 / 0.18);
+  color: #fff;
+}
+
+.title {
+  margin-bottom: 10px;
+}
+
+.body {
+  color: var(--color-muted);
+  font-size: var(--text-base);
+  flex: 1;
+}
+
+.highlight .body {
+  color: rgb(255 255 255 / 0.92);
+}
+
+.highlight .body svg {
+  color: inherit;
+}
