@@ -64,7 +64,7 @@
 .brand img {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: var(--radius-card);
   object-fit: cover;
   background: #fff;
 }
@@ -384,6 +384,13 @@
 
   .footerBrand {
     grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Keep the copyright line clear of the floating call/Zalo buttons. */
+  .footerBottom {
+    padding-right: 72px;
   }
 }
 

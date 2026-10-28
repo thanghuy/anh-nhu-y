@@ -141,8 +141,8 @@
   gap: 6px;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-primary-fill);
+  color: var(--color-on-primary);
   font-size: var(--text-xs);
   font-weight: 600;
 }
@@ -254,8 +254,8 @@
 }
 
 .channel:hover .channelIcon {
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-primary-fill);
+  color: var(--color-on-primary);
 }
 
 .channelIcon {

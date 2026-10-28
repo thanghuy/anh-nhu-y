@@ -8,9 +8,15 @@
   --color-accent: #7ed957;
   --color-accent-soft: #a2e187;
   --color-navy: #2c3f97;
+  /* Filled green surfaces (buttons, labels, highlight card, CTA band) carrying white text.
+     Deep enough for 4.5:1 with white in both themes; --color-primary stays the brand hue for icons and accents. */
+  --color-primary-fill: #23803c;
+  --color-primary-fill-hover: #1b6b32;
+  --color-on-primary: #ffffff;
   /* Decorative fruit tones for 3D orbs and rings */
   --color-fruit: #e0447c;
   --color-sun: #f2c94c;
+  --color-sun-strong: #b07d00;
 
   --color-bg: #ffffff;
   --color-bg-alt: #f5faf2;
@@ -145,6 +151,7 @@ img {
 
 button,
 input,
+select,
 textarea {
   font: inherit;
 }

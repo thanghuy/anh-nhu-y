@@ -204,7 +204,7 @@
 
 .floatBadge .floatIcon {
   background: color-mix(in srgb, var(--color-sun) 22%, transparent);
-  color: #b07d00;
+  color: var(--color-sun-strong);
 }
 
 .floatCard div {
@@ -226,7 +226,7 @@
   place-items: center;
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: var(--radius-card);
   background: var(--color-primary-soft);
   color: var(--color-primary-strong);
 }
@@ -433,8 +433,8 @@
 }
 
 .markets li:hover {
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-primary-fill);
+  color: var(--color-on-primary);
   transform: perspective(300px) translateZ(14px) rotateX(10deg);
 }
 

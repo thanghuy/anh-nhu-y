@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gradient-text",
+        "value": "*",
+        "files": [
+          "src/styles/global.css"
+        ],
+        "createdAt": "2026-10-28T14:12:53.793Z",
+        "reason": "user confirmed: shimmer headline phrase is signature motion (DESIGN.md, document interview 2026-10-28)"
+      }
+    ]
+  }
+}

@@ -70,15 +70,15 @@
 .call {
   width: 60px;
   height: 60px;
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-primary-fill);
+  color: var(--color-on-primary);
 }
 
 .pulse {
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: var(--color-primary-fill);
   opacity: 0;
   animation: pulse 2.4s ease-out infinite;
 }
@@ -89,6 +89,12 @@
 
 .shake {
   animation: shake 2.4s ease-in-out infinite;
+}
+
+/* Zalo and Facebook keep their platform blues so visitors recognise them at a glance. */
+.zalo {
+  background: #0068ff;
+  color: #fff;
 }
 
 /* Facebook */
@@ -178,5 +184,19 @@
 
   .tip {
     display: none;
+  }
+
+  /* Three buttons are the most a phone column can carry without hiding content; Facebook stays in the footer. */
+  .facebook {
+    display: none;
+  }
+
+  /* Step aside while the visitor types, so the buttons never sit on top of a form field. */
+  :global(body:has(:is(input, textarea, select):focus)) .dock {
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s;
   }
 }

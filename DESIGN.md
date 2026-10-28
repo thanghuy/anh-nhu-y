@@ -4,11 +4,17 @@ description: Fresh Vietnamese dragon fruit and coconut, grown, packed and export
 colors:
   orchard-green: "#31a050"
   orchard-green-deep: "#23803c"
+  orchard-fill: "#23803c"
+  orchard-fill-hover: "#1b6b32"
+  on-orchard: "#ffffff"
   leaf-wash: "#eef8e8"
   sprout-lime: "#7ed957"
   sprout-lime-soft: "#a2e187"
   dragon-fruit-pink: "#e0447c"
   harvest-sun: "#f2c94c"
+  harvest-sun-deep: "#b07d00"
+  zalo-blue: "#0068ff"
+  facebook-blue: "#1877f2"
   paper-white: "#ffffff"
   morning-mist: "#f5faf2"
   ink: "#1d1e20"
@@ -65,15 +71,15 @@ spacing:
   header-mobile: "64px"
 components:
   button-primary:
-    backgroundColor: "{colors.orchard-green}"
-    textColor: "{colors.paper-white}"
+    backgroundColor: "{colors.orchard-fill}"
+    textColor: "{colors.on-orchard}"
     typography: "{typography.label}"
     rounded: "{rounded.pill}"
     padding: "12px 24px"
     height: "48px"
   button-primary-hover:
-    backgroundColor: "{colors.orchard-green-deep}"
-    textColor: "{colors.paper-white}"
+    backgroundColor: "{colors.orchard-fill-hover}"
+    textColor: "{colors.on-orchard}"
   button-ghost:
     backgroundColor: "transparent"
     textColor: "{colors.ink}"
@@ -96,8 +102,8 @@ components:
     rounded: "{rounded.card}"
     padding: "clamp(22px, 2.5vw, 32px)"
   card-highlight:
-    backgroundColor: "{colors.orchard-green}"
-    textColor: "{colors.paper-white}"
+    backgroundColor: "{colors.orchard-fill}"
+    textColor: "{colors.on-orchard}"
     rounded: "{rounded.card}"
   chip:
     backgroundColor: "{colors.leaf-wash}"
@@ -142,7 +148,8 @@ Density is generous: wide section padding, a 1200px container, and roomy line he
 A sunlit green palette: one orchard green for action, a lime sprout for highlights, pale leaf washes for quiet surfaces, and two small fruit accents that only appear as decoration.
 
 ### Primary
-- **Orchard Green** (`--color-primary`): The brand green inherited from anhnhuy.com. It fills primary buttons, the highlight card, labels and the scroll progress bar, and colors icons next to facts (phone, badge ticks).
+- **Orchard Green** (`--color-primary`): The brand green inherited from anhnhuy.com. It draws the scroll progress bar, focus rings, input focus and icons next to facts (phone, badge ticks). It is too light to carry white text.
+- **Orchard Fill / Fill Hover / On Orchard** (`--color-primary-fill`, `--color-primary-fill-hover`, `--color-on-primary`): Every filled green surface that carries text: primary buttons, product labels, the highlight card, the CTA band, the call button and the open FAQ toggle. White on the fill measures about 5:1, and the same values hold in dark mode.
 - **Orchard Green Deep** (`--color-primary-strong`): Hover state for primary buttons, plus green text on light grounds (eyebrows, active nav link, chip text), where the lighter green would miss contrast.
 - **Leaf Wash** (`--color-primary-soft`): Tinted fill behind chips and card icon tiles.
 
@@ -151,7 +158,10 @@ A sunlit green palette: one orchard green for action, a lime sprout for highligh
 - **Sprout Lime Soft** (`--color-accent-soft`): Glow in page-hero gradients and the hover fill of the light button.
 
 ### Tertiary
-- **Dragon Fruit Pink** (`--color-fruit`) and **Harvest Sun** (`--color-sun`): Decorative only. They tint the floating hero orbs, the orbiting ring dot and the floating badge icon. They never carry text, actions or meaning.
+- **Dragon Fruit Pink** (`--color-fruit`) and **Harvest Sun** (`--color-sun`, deep `--color-sun-strong`): Decorative only. They tint the floating hero orbs, the orbiting ring dot, the floating badge icon and the testimonial stars. They never carry text, actions or meaning.
+
+### Platform
+- **Zalo Blue** and **Facebook Blue**: only on the floating Zalo and Facebook buttons, so visitors recognise those channels instantly. Nowhere else.
 
 ### Neutral
 - **Paper White** (`--color-bg`, `--color-surface`): Page and card ground.
@@ -165,7 +175,9 @@ A sunlit green palette: one orchard green for action, a lime sprout for highligh
 Dark mode (`prefers-color-scheme: dark`) remaps the same roles. The green lifts to `#4cbb68` with lime `#7ed957` as its strong state, surfaces drop to deep green-blacks (`#0d141a`, `#111b20`, `#151f25`), and text becomes `#eef3ef` / `#a3b0a8`.
 
 ### Named Rules
-**The One Green Voice Rule.** Every clickable call to action is Orchard Green, or white on dark bands. Lime highlights and fruit tones decorate; they never become a button.
+**The Filled-Green Contrast Rule.** Text never sits on `--color-primary`; filled green surfaces use `--color-primary-fill` with `--color-on-primary` (≥4.5:1 in both themes). Glows layered over the fill stay at 20% lime or less.
+
+**The One Green Voice Rule.** Every clickable call to action is Orchard Fill, or white on dark bands. Lime highlights and fruit tones decorate; they never become a button.
 
 **The Token-Only Green Rule.** The brand green changes only through `--color-primary*` / `--color-accent*` in `src/styles/global.css`. No component hard-codes a green hex.
 
@@ -198,7 +210,7 @@ Dark mode (`prefers-color-scheme: dark`) remaps the same roles. The green lifts 
 - **Header:** sticky, 72px (64px mobile), frosted translucent background, border and faint shadow once scrolled, 3px green-to-lime reading-progress bar along its bottom edge.
 - **Grids:** text/photo splits on the home hero, about and product pages; three-column card grids for reasons and testimonials; a four-up stats strip; footer columns at 1.4 / 0.8 / 1.2.
 - **Breakpoints:** 1080px hides the header phone number; 960px collapses split layouts to one column; 860px swaps desktop nav and CTA for the menu button and full-screen mobile menu, and footer goes 2-up; 560px stacks everything to one column.
-- **Floating actions:** call / message / back-to-top buttons stay pinned bottom-right on every page.
+- **Floating actions:** call, Zalo, Facebook and back-to-top buttons stay pinned bottom-right on every page. At ≤640px Facebook drops out (it stays in the footer), and the dock hides while a form field has focus.
 
 ## Elevation & Depth
 
@@ -223,25 +235,26 @@ Gently rounded everywhere, with three steps: **12px** (`--radius-card`) for card
 ### Buttons
 Rounded, sunny and tactile: pills that shine and press.
 - **Shape:** full pill, minimum height 48px, 12px × 24px padding, 600 weight at 15px.
-- **Primary:** Orchard Green with white text and the green glow; hover deepens to Orchard Green Deep.
+- **Primary:** Orchard Fill with white text and the green glow; hover deepens to Orchard Fill Hover.
 - **Ghost:** transparent with a Dew Line border and Ink text; hover turns border Orchard Green and text Orchard Green Deep.
 - **Light:** white with Night Field text, for use on green or dark bands; hover fills Sprout Lime Soft.
 - **Behaviour:** every variant sweeps a white sheen across on hover, nudges its trailing arrow 3px right, scales to 0.98 on press, and is magnetic to the pointer (`data-magnetic`). Disabled is 55% opacity.
 
 ### Chips and Tags
 - **Chip:** Leaf Wash pill with Orchard Green Deep text, 500 weight. Used for variety and market lists.
-- **Label:** solid Orchard Green pill, white 14px 600 text, used for "flagship" / "new" product labels.
+- **Label:** solid Orchard Fill pill, white 14px 600 text, used for "flagship" / "new" product labels.
 - **Photo tag:** frosted white pill (92% opacity, 6px blur) pinned top-left on product photos.
 
 ### Cards / Containers
 - **Corner Style:** 12px (`--radius-card`); every card goes through the shared `Card` component.
-- **Background:** Paper White with a Dew Line border; the **highlight** variant is solid Orchard Green with a lime radial glow in its top-right corner and white text.
+- **Background:** Paper White with a Dew Line border; the **highlight** variant is solid Orchard Fill with a faint (20%) lime radial glow in its top-right corner and white text.
 - **Shadow Strategy:** Card rest → Card lift on hover (see Elevation & Depth).
 - **Internal Padding:** `clamp(22px, 2.5vw, 32px)`.
 - **Behaviour:** 3D pointer tilt with a cursor-following glare. The 48px Leaf Wash icon tile floats forward and twists on hover.
 
 ### Inputs / Fields
-- **Style:** 1.5px Dew Line stroke, Paper White fill, 12px radius, min height 50px (textarea 140px). The label sits above in 500 weight at 15px.
+- **Style:** 1.5px Dew Line stroke, Paper White fill, 12px radius, min height 50px (textarea 140px), 16px text so iOS never zooms. The label sits above in 500 weight at 15px. Selects share the field style with a drawn chevron. The quote form runs two columns, one below 560px.
+- **After submit:** a Leaf Wash status panel confirms the mail app opened and offers the address to copy plus Zalo and phone as fallbacks.
 - **Hover:** border mixes 40% toward Orchard Green.
 - **Focus:** border goes Orchard Green with a 4px Orchard Green halo at 18%; no outline.
 - **Required:** asterisk in Orchard Green Deep.
@@ -254,7 +267,7 @@ Rounded, sunny and tactile: pills that shine and press.
 - **Page hero:** Morning Mist band with a lime radial glow and a slowly drifting blurred blob behind the title.
 - **Stats strip:** large animated count-up numbers with labels, divided by hairlines.
 - **Testimonials:** quote cards with five stars, anonymous attribution.
-- **CTA band:** 20px-radius Orchard Green panel with a soft glow, light and ghost actions, and the hotline.
+- **CTA band:** 20px-radius Orchard Fill panel with a faint lime glow, light and ghost actions, and the hotline.
 - **FAQ:** native `<details>` rows with a plus that rotates into a minus, and smooth height animation.
 
 ### Home Hero Stage (signature)
@@ -263,6 +276,8 @@ A 20px-radius photo frame that tilts with the pointer. An orbiting ring carries 
 ## Do's and Don'ts
 
 ### Do:
+- **Do** put text on green only via `--color-primary-fill` + `--color-on-primary`.
+- **Do** write phone numbers in international format (+84 …) and give hours with the timezone (GMT+7).
 - **Do** take every color from the `--color-*` tokens in `src/styles/global.css`, and change the brand green only there.
 - **Do** build every card with the shared `Card` component on the 12px `--radius-card`.
 - **Do** open sections with eyebrow → headline → lead, and alternate Paper White and Morning Mist bands.

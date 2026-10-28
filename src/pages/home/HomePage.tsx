@@ -13,7 +13,7 @@ import styles from './HomePage.module.css'
 // Icons and images per item; the text for each lives at the same index in `t.home`.
 const REASON_ICONS = ['truck', 'tag', 'leaf'] as const
 
-const PRODUCT_IMAGES = [IMAGES.packingHall, IMAGES.coconut]
+const PRODUCT_IMAGES = [IMAGES.cartons, IMAGES.coconut]
 
 // Each crop is one photo inside the original "Thành tựu tiêu biểu" collage.
 const ACHIEVEMENT_X = ['8.9%', '50.1%', '91.3%']
@@ -67,9 +67,9 @@ export function HomePage() {
               <span className={`${styles.ring} ${styles.ringAlt}`} aria-hidden="true" />
               <div className={styles.heroFrame}>
                 <img
-                  src={img(IMAGES.field, 1000)}
+                  src={img(IMAGES.packingHall, 1000)}
                   width="1000"
-                  height="1000"
+                  height="750"
                   alt={h.heroAlt}
                   fetchPriority="high"
                 />
@@ -97,6 +97,31 @@ export function HomePage() {
         </div>
         <div className="container">
           <StatsBar />
+        </div>
+      </section>
+
+      <section className="section section--alt">
+        <div className="container">
+          <div className="sectionHead sectionHead--center" data-reveal>
+            <span className="eyebrow">{h.achievementsEyebrow}</span>
+            <h2>{h.achievementsTitle}</h2>
+          </div>
+          <div className={styles.achievements} data-reveal="stagger">
+            {h.achievements.map((text, i) => (
+              <Card key={ACHIEVEMENT_X[i]} className={styles.achievement}>
+                <div
+                  className={styles.achievementPhoto}
+                  role="img"
+                  aria-label={text}
+                  style={{
+                    backgroundImage: `url(${img(IMAGES.achievements, 1920)})`,
+                    backgroundPositionX: ACHIEVEMENT_X[i],
+                  }}
+                />
+                <p>{text}</p>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -192,35 +217,9 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--alt">
-        <div className="container">
-          <div className="sectionHead sectionHead--center" data-reveal>
-            <span className="eyebrow">{h.achievementsEyebrow}</span>
-            <h2>{h.achievementsTitle}</h2>
-          </div>
-          <div className={styles.achievements} data-reveal="stagger">
-            {h.achievements.map((text, i) => (
-              <Card key={ACHIEVEMENT_X[i]} className={styles.achievement}>
-                <div
-                  className={styles.achievementPhoto}
-                  role="img"
-                  aria-label={text}
-                  style={{
-                    backgroundImage: `url(${img(IMAGES.achievements, 1920)})`,
-                    backgroundPositionX: ACHIEVEMENT_X[i],
-                  }}
-                />
-                <p>{text}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <Testimonials />
-      <div className="section--alt">
-        <Faq />
-      </div>
+      <Testimonials alt />
+      <Faq />
       <CtaBand />
     </>
   )

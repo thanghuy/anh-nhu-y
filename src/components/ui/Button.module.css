@@ -58,15 +58,15 @@
 }
 
 .primary {
-  background: var(--color-primary);
-  color: #fff;
+  background: var(--color-primary-fill);
+  color: var(--color-on-primary);
   box-shadow: 0 6px 18px color-mix(in srgb, var(--color-primary) 30%, transparent);
 }
 
 .primary:hover {
-  background: var(--color-primary-strong);
+  background: var(--color-primary-fill-hover);
   box-shadow:
-    0 2px 0 color-mix(in srgb, var(--color-primary-strong) 70%, #000),
+    0 2px 0 color-mix(in srgb, var(--color-primary-fill-hover) 70%, #000),
     0 14px 30px color-mix(in srgb, var(--color-primary) 40%, transparent);
 }
 

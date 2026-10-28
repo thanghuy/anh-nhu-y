@@ -6,7 +6,7 @@ import styles from './FloatingActions.module.css'
 
 const RING = 2 * Math.PI * 22
 
-// Bottom-right quick actions: call, Facebook, and back-to-top with a scroll-progress ring.
+// Bottom-right quick actions: call, Zalo, Facebook, and back-to-top with a scroll-progress ring.
 export function FloatingActions() {
   const { t } = useI18n()
   const [progress, setProgress] = useState(0)
@@ -48,6 +48,17 @@ export function FloatingActions() {
         <Icon name="arrowUp" size={20} />
         <span className={styles.tip}>{t.common.backToTop}</span>
       </button>
+
+      <a
+        className={`${styles.fab} ${styles.zalo}`}
+        href={CONTACT.zalo}
+        target="_blank"
+        rel="noreferrer"
+        aria-label={t.common.messageZalo}
+      >
+        <Icon name="chat" size={22} />
+        <span className={styles.tip}>Zalo</span>
+      </a>
 
       <a
         className={`${styles.fab} ${styles.facebook}`}

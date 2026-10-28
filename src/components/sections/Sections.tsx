@@ -53,10 +53,10 @@ export function StatsBar() {
   )
 }
 
-export function Testimonials() {
+export function Testimonials({ alt = false }: { alt?: boolean }) {
   const { t } = useI18n()
   return (
-    <section className="section">
+    <section className={`section ${alt ? 'section--alt' : ''}`}>
       <div className="container">
         <div className="sectionHead sectionHead--center" data-reveal>
           <span className="eyebrow">{t.testimonials.eyebrow}</span>

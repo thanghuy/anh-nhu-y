@@ -25,7 +25,8 @@ export function ContactPage() {
       title: c.support,
       items: [
         { text: CONTACT.phone, href: CONTACT.phoneHref },
-        ...CONTACT.hotlines.map((p) => ({ text: p, href: `tel:${p}` })),
+        ...CONTACT.hotlines,
+        { text: `Zalo ${CONTACT.phone}`, href: CONTACT.zalo },
       ],
     },
     {
@@ -45,6 +46,7 @@ export function ContactPage() {
 
       <section className="section">
         <div className={`container ${styles.contact}`}>
+          <h2 className="visually-hidden">{c.channels}</h2>
           <div className={styles.channels} data-reveal="stagger">
             {channels.map((ch) => (
               <div key={ch.title} className={`${styles.channel} glare`} data-tilt="6">
@@ -66,10 +68,16 @@ export function ContactPage() {
             <h2>{c.formTitle}</h2>
             <p className={styles.formIntro}>{c.formIntro}</p>
             <MailForm
-              to="contact@anhnhuy.com"
+              to={CONTACT.quoteEmail}
               subject={c.subject}
               fields={[
                 { name: 'name', label: c.name, autoComplete: 'name', placeholder: c.namePlaceholder },
+                {
+                  name: 'company',
+                  label: c.company,
+                  autoComplete: 'organization',
+                  placeholder: c.companyPlaceholder,
+                },
                 {
                   name: 'email',
                   label: c.emailLabel,
@@ -78,12 +86,29 @@ export function ContactPage() {
                   autoComplete: 'email',
                   placeholder: c.emailPlaceholder,
                 },
+                { name: 'phone', label: c.phoneLabel, type: 'tel', autoComplete: 'tel', placeholder: c.phonePlaceholder },
+                {
+                  name: 'product',
+                  label: c.product,
+                  type: 'select',
+                  required: true,
+                  placeholder: c.productPlaceholder,
+                  options: c.productOptions,
+                },
+                { name: 'volume', label: c.volume, placeholder: c.volumePlaceholder },
+                {
+                  name: 'destination',
+                  label: c.destination,
+                  autoComplete: 'country-name',
+                  placeholder: c.destinationPlaceholder,
+                  wide: true,
+                },
                 {
                   name: 'message',
                   label: c.message,
                   type: 'textarea',
-                  required: true,
                   placeholder: c.messagePlaceholder,
+                  wide: true,
                 },
               ]}
             />

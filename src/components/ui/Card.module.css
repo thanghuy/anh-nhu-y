@@ -24,14 +24,14 @@
 
 .highlight {
   background:
-    radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--color-accent) 45%, transparent), transparent 60%),
-    var(--color-primary);
-  border-color: var(--color-primary);
-  color: #fff;
+    radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 60%),
+    var(--color-primary-fill);
+  border-color: var(--color-primary-fill);
+  color: var(--color-on-primary);
 }
 
 .highlight:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-primary-fill);
 }
 
 .icon {
@@ -58,7 +58,7 @@
 
 .highlight .icon {
   background: rgb(255 255 255 / 0.18);
-  color: #fff;
+  color: var(--color-on-primary);
 }
 
 .title {
@@ -72,7 +72,7 @@
 }
 
 .highlight .body {
-  color: rgb(255 255 255 / 0.92);
+  color: var(--color-on-primary);
 }
 
 .highlight .body svg {

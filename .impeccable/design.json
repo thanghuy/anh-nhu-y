@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-28T14:00:06+00:00",
+  "generatedAt": "2026-10-28T14:17:22+00:00",
   "title": "Design System: Anh Như Ý",
   "extensions": {
     "colorMeta": {
@@ -32,6 +32,51 @@
           "#7bb683",
           "#aad7af",
           "#d9f8dd"
+        ]
+      },
+      "orchard-fill": {
+        "role": "primary",
+        "displayName": "Orchard Fill",
+        "canonical": "#23803c",
+        "tonalRamp": [
+          "#001100",
+          "#002f0b",
+          "#08501f",
+          "#1d7435",
+          "#4a9559",
+          "#7bb683",
+          "#aad7af",
+          "#d9f8dd"
+        ]
+      },
+      "orchard-fill-hover": {
+        "role": "primary",
+        "displayName": "Orchard Fill Hover",
+        "canonical": "#1b6b32",
+        "tonalRamp": [
+          "#001100",
+          "#002f0b",
+          "#095021",
+          "#29723b",
+          "#599263",
+          "#86b28c",
+          "#b3d3b7",
+          "#e0f5e3"
+        ]
+      },
+      "on-orchard": {
+        "role": "neutral",
+        "displayName": "On Orchard",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
         ]
       },
       "leaf-wash": {
@@ -107,6 +152,51 @@
           "#c4a135",
           "#edc549",
           "#ffeb80"
+        ]
+      },
+      "harvest-sun-deep": {
+        "role": "tertiary",
+        "displayName": "Harvest Sun Deep",
+        "canonical": "#b07d00",
+        "tonalRamp": [
+          "#160700",
+          "#362000",
+          "#5a3b00",
+          "#815900",
+          "#aa7800",
+          "#ca9d4b",
+          "#eac381",
+          "#ffeab5"
+        ]
+      },
+      "zalo-blue": {
+        "role": "platform",
+        "displayName": "Zalo Blue",
+        "canonical": "#0068ff",
+        "tonalRamp": [
+          "#000233",
+          "#001a65",
+          "#00369c",
+          "#0054d7",
+          "#2378ff",
+          "#5ca1ff",
+          "#90c9ff",
+          "#c4f0ff"
+        ]
+      },
+      "facebook-blue": {
+        "role": "platform",
+        "displayName": "Facebook Blue",
+        "canonical": "#1877f2",
+        "tonalRamp": [
+          "#00062c",
+          "#00205a",
+          "#003d8d",
+          "#075cc2",
+          "#257df6",
+          "#5ea5ff",
+          "#91cbff",
+          "#c3f1ff"
         ]
       },
       "paper-white": {
@@ -345,7 +435,7 @@
       "refersTo": "button-primary",
       "description": "The one green call to action: quote requests and main navigation actions.",
       "html": "<button class=\"ds-btn ds-btn-primary\">Nhận báo giá <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
-      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 24px; border-radius: 999px; border: 1.5px solid transparent; font: 600 15px/1.4 'Be Vietnam Pro', system-ui, sans-serif; cursor: pointer; position: relative; overflow: hidden; isolation: isolate; transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .15s ease, box-shadow .2s ease; } .ds-btn::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / .45) 50%, transparent 70%); translate: -120% 0; } .ds-btn:hover::before { translate: 120% 0; transition: translate .75s cubic-bezier(.16,1,.3,1); } .ds-btn svg { transition: transform .2s cubic-bezier(.16,1,.3,1); } .ds-btn:hover svg { transform: translateX(3px); } .ds-btn:active { transform: scale(.98); } .ds-btn:focus-visible { outline: 2px solid var(--color-primary, #31a050); outline-offset: 3px; } .ds-btn-primary { background: var(--color-primary, #31a050); color: #fff; box-shadow: 0 6px 18px color-mix(in srgb, var(--color-primary, #31a050) 30%, transparent); } .ds-btn-primary:hover { background: var(--color-primary-strong, #23803c); box-shadow: 0 2px 0 color-mix(in srgb, var(--color-primary-strong, #23803c) 70%, #000), 0 14px 30px color-mix(in srgb, var(--color-primary, #31a050) 40%, transparent); }"
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 24px; border-radius: 999px; border: 1.5px solid transparent; font: 600 15px/1.4 'Be Vietnam Pro', system-ui, sans-serif; cursor: pointer; position: relative; overflow: hidden; isolation: isolate; transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .15s ease, box-shadow .2s ease; } .ds-btn::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / .45) 50%, transparent 70%); translate: -120% 0; } .ds-btn:hover::before { translate: 120% 0; transition: translate .75s cubic-bezier(.16,1,.3,1); } .ds-btn svg { transition: transform .2s cubic-bezier(.16,1,.3,1); } .ds-btn:hover svg { transform: translateX(3px); } .ds-btn:active { transform: scale(.98); } .ds-btn:focus-visible { outline: 2px solid var(--color-primary, #31a050); outline-offset: 3px; } .ds-btn-primary { background: var(--color-primary-fill, #23803c); color: var(--color-on-primary, #fff); box-shadow: 0 6px 18px color-mix(in srgb, var(--color-primary, #31a050) 30%, transparent); } .ds-btn-primary:hover { background: var(--color-primary-fill-hover, #1b6b32); box-shadow: 0 2px 0 color-mix(in srgb, var(--color-primary-fill-hover, #1b6b32) 70%, #000), 0 14px 30px color-mix(in srgb, var(--color-primary, #31a050) 40%, transparent); }"
     },
     {
       "name": "Ghost Button",
@@ -361,7 +451,7 @@
       "refersTo": "button-light",
       "description": "White action on green or dark bands, e.g. the CTA band.",
       "html": "<div class=\"ds-band\"><button class=\"ds-btn-light\">Liên hệ báo giá</button></div>",
-      "css": ".ds-band { padding: 24px; border-radius: 20px; background: var(--color-primary, #31a050); } .ds-btn-light { display: inline-flex; align-items: center; min-height: 48px; padding: 12px 24px; border-radius: 999px; border: 0; background: #fff; color: var(--color-dark, #0d141a); font: 600 15px/1.4 'Be Vietnam Pro', system-ui, sans-serif; cursor: pointer; transition: background-color .2s ease, transform .15s ease; } .ds-btn-light:hover { background: var(--color-accent-soft, #a2e187); } .ds-btn-light:active { transform: scale(.98); } .ds-btn-light:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }"
+      "css": ".ds-band { padding: 24px; border-radius: 20px; background: var(--color-primary-fill, #23803c); } .ds-btn-light { display: inline-flex; align-items: center; min-height: 48px; padding: 12px 24px; border-radius: 999px; border: 0; background: #fff; color: var(--color-dark, #0d141a); font: 600 15px/1.4 'Be Vietnam Pro', system-ui, sans-serif; cursor: pointer; transition: background-color .2s ease, transform .15s ease; } .ds-btn-light:hover { background: var(--color-accent-soft, #a2e187); } .ds-btn-light:active { transform: scale(.98); } .ds-btn-light:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }"
     },
     {
       "name": "Card",
@@ -377,7 +467,7 @@
       "refersTo": "card-highlight",
       "description": "Green card variant used once per group to emphasise one reason.",
       "html": "<article class=\"ds-card-hl\"><h3>Thanh long chất lượng cao</h3><p>Thu hoạch trực tiếp từ nông trại, chọn lọc theo tiêu chuẩn xuất khẩu.</p></article>",
-      "css": ".ds-card-hl { max-width: 340px; padding: clamp(22px, 2.5vw, 32px); border-radius: 12px; border: 1px solid var(--color-primary, #31a050); color: #fff; background: radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--color-accent, #7ed957) 45%, transparent), transparent 60%), var(--color-primary, #31a050); box-shadow: 0 1px 2px rgb(13 20 26 / .04), 0 8px 24px rgb(13 20 26 / .06); transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .3s; } .ds-card-hl:hover { transform: translateY(-6px); box-shadow: 0 2px 4px rgb(13 20 26 / .05), 0 16px 40px rgb(13 20 26 / .1); } .ds-card-hl h3 { margin: 0 0 10px; font: 700 1.25rem/1.3 Montserrat, sans-serif; } .ds-card-hl p { margin: 0; font: 400 1rem/1.7 'Be Vietnam Pro', sans-serif; color: rgb(255 255 255 / .92); }"
+      "css": ".ds-card-hl { max-width: 340px; padding: clamp(22px, 2.5vw, 32px); border-radius: 12px; border: 1px solid var(--color-primary-fill, #23803c); color: #fff; background: radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--color-accent, #7ed957) 20%, transparent), transparent 60%), var(--color-primary-fill, #23803c); box-shadow: 0 1px 2px rgb(13 20 26 / .04), 0 8px 24px rgb(13 20 26 / .06); transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .3s; } .ds-card-hl:hover { transform: translateY(-6px); box-shadow: 0 2px 4px rgb(13 20 26 / .05), 0 16px 40px rgb(13 20 26 / .1); } .ds-card-hl h3 { margin: 0 0 10px; font: 700 1.25rem/1.3 Montserrat, sans-serif; } .ds-card-hl p { margin: 0; font: 400 1rem/1.7 'Be Vietnam Pro', sans-serif; color: #fff; }"
     },
     {
       "name": "Chips",
@@ -385,7 +475,7 @@
       "refersTo": "chip",
       "description": "Leaf-wash pills for varieties and markets; solid label for product status.",
       "html": "<div class=\"ds-chips\"><span class=\"ds-label\">Sản phẩm chủ lực</span><span class=\"ds-chip\">Ruột trắng</span><span class=\"ds-chip\">Ruột đỏ</span><span class=\"ds-chip\">Vỏ vàng</span></div>",
-      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ds-chip { padding: 7px 14px; border-radius: 999px; background: var(--color-primary-soft, #eef8e8); color: var(--color-primary-strong, #23803c); font: 500 15px/1.4 'Be Vietnam Pro', sans-serif; } .ds-label { padding: 6px 14px; border-radius: 999px; background: var(--color-primary, #31a050); color: #fff; font: 600 14px/1.4 'Be Vietnam Pro', sans-serif; }"
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ds-chip { padding: 7px 14px; border-radius: 999px; background: var(--color-primary-soft, #eef8e8); color: var(--color-primary-strong, #23803c); font: 500 15px/1.4 'Be Vietnam Pro', sans-serif; } .ds-label { padding: 6px 14px; border-radius: 999px; background: var(--color-primary-fill, #23803c); color: #fff; font: 600 14px/1.4 'Be Vietnam Pro', sans-serif; }"
     },
     {
       "name": "Text Field",
@@ -425,8 +515,13 @@
     ],
     "rules": [
       {
+        "name": "The Filled-Green Contrast Rule",
+        "body": "Text never sits on `--color-primary`; filled green surfaces use `--color-primary-fill` with `--color-on-primary` (≥4.5:1 in both themes). Glows layered over the fill stay at 20% lime or less.",
+        "section": "colors"
+      },
+      {
         "name": "The One Green Voice Rule",
-        "body": "Every clickable call to action is Orchard Green, or white on dark bands. Lime highlights and fruit tones decorate; they never become a button.",
+        "body": "Every clickable call to action is Orchard Fill, or white on dark bands. Lime highlights and fruit tones decorate; they never become a button.",
         "section": "colors"
       },
       {
@@ -456,6 +551,8 @@
       }
     ],
     "dos": [
+      "Do put text on green only via `--color-primary-fill` + `--color-on-primary`.",
+      "Do write phone numbers in international format (+84 …) and give hours with the timezone (GMT+7).",
       "Do take every color from the `--color-*` tokens in `src/styles/global.css`, and change the brand green only there.",
       "Do build every card with the shared `Card` component on the 12px `--radius-card`.",
       "Do open sections with eyebrow → headline → lead, and alternate Paper White and Morning Mist bands.",

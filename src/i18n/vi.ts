@@ -22,14 +22,15 @@ export const vi = {
     language: 'Ngôn ngữ',
     backToTop: 'Lên đầu trang',
     messageFacebook: 'Nhắn tin qua Facebook',
+    messageZalo: 'Nhắn tin qua Zalo',
     call: 'Gọi',
   },
   contact: {
     address: 'Đường TL 715, xã Hàm Thuận, tỉnh Lâm Đồng',
-    hours: '9h - 17h',
+    hours: '9h – 17h (GMT+7)',
   },
   footer: {
-    tagline: 'Nhà cung cấp thanh long tươi uy tín từ Việt Nam, đạt chuẩn GlobalGAP và VietGAP.',
+    tagline: 'Nhà cung cấp thanh long và dừa tươi uy tín từ Việt Nam, đạt chuẩn GlobalGAP và VietGAP.',
     navigation: 'Điều hướng',
     contact: 'Liên hệ',
     hours: 'Giờ làm việc',
@@ -46,7 +47,7 @@ export const vi = {
   testimonials: {
     eyebrow: 'Khách hàng nói gì',
     title: 'Trải nghiệm của khách hàng',
-    lead: 'Sản phẩm thanh long tươi ngon, chất lượng tuyệt vời từ Anh Như Ý!',
+    lead: 'Nhận xét từ các đối tác đã hợp tác nhiều mùa vụ với Anh Như Ý.',
     stars: '5 trên 5 sao',
     author: 'Khách hàng của Anh Như Ý',
     items: [
@@ -67,11 +68,11 @@ export const vi = {
     items: [
       {
         q: 'Anh Như Ý cung cấp sản phẩm gì?',
-        a: 'Chúng tôi chuyên xuất khẩu trái cây tươi chất lượng cao, đặc biệt là thanh long Bình Thuận, sản phẩm nổi tiếng của Việt Nam. Ngoài ra, chúng tôi đang mở rộng thêm các mặt hàng nông sản khác như dừa tươi, sầu riêng, đáp ứng nhu cầu đa dạng của khách hàng quốc tế.',
+        a: 'Chúng tôi chuyên xuất khẩu trái cây tươi chất lượng cao, đặc biệt là thanh long Bình Thuận, sản phẩm nổi tiếng của Việt Nam. Ngoài ra, chúng tôi đã có thêm dừa tươi và đang hướng tới các nông sản khác như sầu riêng trong tương lai.',
       },
       {
         q: 'Thời gian giao hàng là bao lâu?',
-        a: 'Thời gian giao hàng thường từ 5 đến 10 ngày làm việc, tùy theo địa điểm nhận hàng và số lượng đơn đặt. Với những đơn hàng gấp, chúng tôi có thể sắp xếp linh hoạt để đảm bảo tiến độ.',
+        a: 'Thời gian giao hàng thường từ 7 đến 10 ngày làm việc, tùy theo địa điểm nhận hàng và số lượng đơn đặt. Với những đơn hàng gấp, chúng tôi có thể sắp xếp linh hoạt để đảm bảo tiến độ.',
       },
       {
         q: 'Có chính sách đổi trả không?',
@@ -86,14 +87,19 @@ export const vi = {
         a: 'Chúng tôi hỗ trợ giao hàng tận nơi cho khách hàng tại khu vực nội địa. Đối với khách quốc tế, hàng được vận chuyển theo các điều kiện thương mại quốc tế (Incoterms) bằng đường hàng không hoặc đường biển, tùy theo yêu cầu.',
       },
       {
-        q: 'Có thể đặt hàng trực tuyến không?',
-        a: 'Khách hàng có thể đặt hàng trực tuyến qua website chính thức hoặc liên hệ trực tiếp với đội ngũ kinh doanh của chúng tôi để được hỗ trợ nhanh chóng, thuận tiện.',
+        q: 'Đặt hàng như thế nào?',
+        a: 'Gửi yêu cầu báo giá qua biểu mẫu trên trang Liên hệ (sản phẩm, số lượng, thị trường), hoặc gọi điện, nhắn Zalo cho đội ngũ kinh doanh. Chúng tôi phản hồi trong giờ làm việc và gửi báo giá chi tiết.',
       },
     ],
   },
   form: {
-    submit: 'Gửi thông tin',
+    submit: 'Gửi yêu cầu báo giá',
     note: 'Biểu mẫu sẽ mở ứng dụng email của bạn với nội dung đã điền sẵn.',
+    sentTitle: 'Đã mở ứng dụng email.',
+    sentText: 'Nếu không thấy cửa sổ email, hãy gửi yêu cầu tới địa chỉ dưới đây.',
+    copy: 'Sao chép',
+    copied: 'Đã sao chép',
+    orReach: 'Hoặc liên hệ nhanh qua',
   },
   home: {
     eyebrow: 'Xuất khẩu trái cây tươi Việt Nam',
@@ -102,7 +108,7 @@ export const vi = {
     lead: 'Nguồn cung dồi dào, luôn sẵn sàng và cam kết chất lượng ổn định, đáp ứng mọi nhu cầu hợp tác B2B.',
     viewProducts: 'Xem sản phẩm',
     badges: ['GlobalGAP', 'VietGAP', 'Đóng gói theo yêu cầu'],
-    heroAlt: 'Nông dân thu hoạch thanh long trên vườn',
+    heroAlt: 'Thanh long đỏ xếp đầy nhà đóng gói của Anh Như Ý',
     marketsCard: '6 khu vực thị trường',
     marketsCardSub: 'Châu Âu, Mỹ, Nhật Bản…',
     exportStandard: 'Chuẩn xuất khẩu',
@@ -145,7 +151,7 @@ export const vi = {
       {
         name: 'Thanh long',
         tag: 'Sản phẩm chủ lực',
-        alt: 'Thanh long đỏ xếp đầy nhà đóng gói',
+        alt: 'Pallet thùng carton thanh long xếp cao trong kho',
         text: 'Ruột trắng, ruột đỏ và vỏ vàng. Size 350 đến 650g/quả, đóng thùng carton 4 đến 18kg theo yêu cầu.',
       },
       {
@@ -256,12 +262,24 @@ export const vi = {
     formTitle: 'Gửi yêu cầu báo giá',
     formIntro: 'Cho chúng tôi biết sản phẩm, số lượng và thị trường bạn quan tâm.',
     subject: 'Liên hệ từ website Anh Như Ý',
+    channels: 'Kênh liên hệ',
     name: 'Tên của bạn',
     namePlaceholder: 'Nguyễn Văn A',
+    company: 'Công ty',
+    companyPlaceholder: 'Tên công ty',
     emailLabel: 'Email liên hệ',
     emailPlaceholder: 'ban@congty.com',
-    message: 'Nội dung tin nhắn',
-    messagePlaceholder: 'Sản phẩm, số lượng, thị trường…',
+    phoneLabel: 'Số điện thoại / Zalo',
+    phonePlaceholder: '0912 345 678',
+    product: 'Sản phẩm quan tâm',
+    productPlaceholder: 'Chọn sản phẩm',
+    productOptions: ['Thanh long ruột trắng', 'Thanh long ruột đỏ', 'Thanh long vỏ vàng', 'Dừa tươi', 'Gia công đóng gói', 'Khác'],
+    volume: 'Số lượng dự kiến',
+    volumePlaceholder: 'VD: 1 container 40ft, 5 tấn/tuần',
+    destination: 'Thị trường / cảng đến',
+    destinationPlaceholder: 'VD: Rotterdam, Hà Lan',
+    message: 'Yêu cầu thêm',
+    messagePlaceholder: 'Size, quy cách thùng, điều kiện giao hàng (FOB, CIF…)',
   },
 }
 
