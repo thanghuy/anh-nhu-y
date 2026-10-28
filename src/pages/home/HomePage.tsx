@@ -14,6 +14,7 @@ import styles from './HomePage.module.css'
 const REASON_ICONS = ['truck', 'tag', 'leaf'] as const
 
 const PRODUCT_IMAGES = [IMAGES.cartons, IMAGES.coconut]
+const PRODUCT_LINKS = ['/san-pham#thanh-long', '/san-pham#dua']
 
 // Each crop is one photo inside the original "Thành tựu tiêu biểu" collage.
 const ACHIEVEMENT_X = ['8.9%', '50.1%', '91.3%']
@@ -102,6 +103,54 @@ export function HomePage() {
 
       <section className="section section--alt">
         <div className="container">
+          <div className={styles.headRow} data-reveal>
+            <div className="sectionHead" style={{ marginBottom: 0 }}>
+              <span className="eyebrow">{h.productsEyebrow}</span>
+              <h2>{h.productsTitle}</h2>
+              <p className="lead">{h.productsLead}</p>
+            </div>
+            <ButtonLink to="/san-pham" variant="ghost">
+              {h.productsMore}
+              <Icon name="arrowRight" size={18} />
+            </ButtonLink>
+          </div>
+          <div className={styles.products} data-reveal="stagger">
+            {h.products.map((p, i) => (
+              <Link key={p.name} to={PRODUCT_LINKS[i]} className={`${styles.product} glare`} data-tilt="6">
+                <div className={styles.productMedia}>
+                  <img
+                    className="parallax-img"
+                    src={img(PRODUCT_IMAGES[i], 900)}
+                    width="900"
+                    height="675"
+                    loading="lazy"
+                    alt={p.alt}
+                  />
+                  <span className={styles.productTag}>{p.tag}</span>
+                </div>
+                <div className={styles.productBody}>
+                  <h3>{p.name}</h3>
+                  <p>{p.text}</p>
+                  <span className={styles.productLink}>
+                    {h.learnMore} <Icon name="arrowRight" size={16} />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+          <div className={styles.marketsRow} data-reveal>
+            <p className={styles.marketsLabel}>{h.marketsLabel}</p>
+            <ul className={styles.markets} data-reveal="stagger">
+              {t.markets.map((m) => (
+                <li key={m}>{m}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <div className="sectionHead sectionHead--center" data-reveal>
             <span className="eyebrow">{h.achievementsEyebrow}</span>
             <h2>{h.achievementsTitle}</h2>
@@ -125,7 +174,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--alt">
         <div className="container">
           <div className="sectionHead sectionHead--center" data-reveal>
             <span className="eyebrow">{h.reasonsEyebrow}</span>
@@ -134,7 +183,7 @@ export function HomePage() {
           </div>
           <div className={styles.reasons} data-reveal="stagger">
             {h.reasons.map((r, i) => (
-              <Card key={r.title} title={r.title} icon={<Icon name={REASON_ICONS[i]} size={24} />} highlight={i === 1}>
+              <Card key={r.title} title={r.title} icon={<Icon name={REASON_ICONS[i]} size={24} />} highlight={i === 0}>
                 <ul className={styles.points}>
                   {r.points.map((p) => (
                     <li key={p}>
@@ -149,77 +198,11 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section--alt">
-        <div className="container">
-          <div className={styles.headRow} data-reveal>
-            <div className="sectionHead" style={{ marginBottom: 0 }}>
-              <span className="eyebrow">{h.productsEyebrow}</span>
-              <h2>{h.productsTitle}</h2>
-              <p className="lead">{h.productsLead}</p>
-            </div>
-            <ButtonLink to="/san-pham" variant="ghost">
-              {h.productsMore}
-              <Icon name="arrowRight" size={18} />
-            </ButtonLink>
-          </div>
-          <div className={styles.products} data-reveal="stagger">
-            {h.products.map((p, i) => (
-              <Link key={p.name} to="/san-pham" className={`${styles.product} glare`} data-tilt="6">
-                <div className={styles.productMedia}>
-                  <img
-                    className="parallax-img"
-                    src={img(PRODUCT_IMAGES[i], 900)}
-                    width="900"
-                    height="675"
-                    loading="lazy"
-                    alt={p.alt}
-                  />
-                  <span className={styles.productTag}>{p.tag}</span>
-                </div>
-                <div className={styles.productBody}>
-                  <h3>{p.name}</h3>
-                  <p>{p.text}</p>
-                  <span className={styles.productLink}>
-                    {h.learnMore} <Icon name="arrowRight" size={16} />
-                  </span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className={`container ${styles.commit}`}>
-          <figure className={styles.commitMedia} data-reveal="left">
-            <img
-              className="parallax-img"
-              src={img(IMAGES.storefront, 1000)}
-              width="1000"
-              height="750"
-              loading="lazy"
-              alt={h.storefrontAlt}
-            />
-          </figure>
-          <div className={styles.commitText} data-reveal="right">
-            <span className="eyebrow">{h.commitEyebrow}</span>
-            <h2>{h.commitTitle}</h2>
-            <p className="lead">{h.commitLead}</p>
-            <div>
-              <p className={styles.marketsLabel}>{h.marketsLabel}</p>
-              <ul className={styles.markets} data-reveal="stagger">
-                {t.markets.map((m) => (
-                  <li key={m}>{m}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <Testimonials alt />
-      <Faq />
+      <Testimonials />
+      <div className="section--alt">
+        <Faq />
+      </div>
       <CtaBand />
     </>
   )

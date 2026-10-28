@@ -23,16 +23,17 @@ interface MailFormProps {
   subject: string
   fields: MailField[]
   submitLabel?: string
+  initialValues?: Record<string, string>
 }
 
 // The site has no form backend, so a submit opens the visitor's mail app with the message filled in.
 // Mail apps are often missing on phones, so after submitting the form also offers the address to copy
 // and the direct channels as a fallback.
-export function MailForm({ to, subject, fields, submitLabel }: MailFormProps) {
+export function MailForm({ to, subject, fields, submitLabel, initialValues }: MailFormProps) {
   const { t } = useI18n()
-  const [values, setValues] = useState<Record<string, string>>({})
+  const [values, setValues] = useState<Record<string, string>>(initialValues ?? {})
   const [sent, setSent] = useState(false)
-  const [copied, setCopied] = useState(false)
+  const [copy, setCopy] = useState<'idle' | 'copied' | 'failed'>('idle')
 
   const submit = (e: FormEvent) => {
     e.preventDefault()
@@ -41,12 +42,12 @@ export function MailForm({ to, subject, fields, submitLabel }: MailFormProps) {
     setSent(true)
   }
 
-  const copy = async () => {
+  const copyAddress = async () => {
     try {
       await navigator.clipboard.writeText(to)
-      setCopied(true)
+      setCopy('copied')
     } catch {
-      setCopied(false)
+      setCopy('failed')
     }
   }
 
@@ -96,11 +97,12 @@ export function MailForm({ to, subject, fields, submitLabel }: MailFormProps) {
           </p>
           <div className={styles.fallback}>
             <code>{to}</code>
-            <button type="button" className={styles.copy} onClick={copy}>
-              <Icon name={copied ? 'check' : 'copy'} size={16} />
-              {copied ? t.form.copied : t.form.copy}
+            <button type="button" className={styles.copy} onClick={copyAddress}>
+              <Icon name={copy === 'copied' ? 'check' : 'copy'} size={16} />
+              {copy === 'copied' ? t.form.copied : t.form.copy}
             </button>
           </div>
+          {copy === 'failed' && <p>{t.form.copyFailed}</p>}
           <p className={styles.alt}>
             {t.form.orReach}{' '}
             <a href={CONTACT.zalo} target="_blank" rel="noreferrer">

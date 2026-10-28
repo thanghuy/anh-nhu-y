@@ -3,7 +3,7 @@ name: Anh Như Ý
 description: Fresh Vietnamese dragon fruit and coconut, grown, packed and exported from Bình Thuận.
 colors:
   orchard-green: "#31a050"
-  orchard-green-deep: "#23803c"
+  orchard-green-deep: "#1f7536"
   orchard-fill: "#23803c"
   orchard-fill-hover: "#1b6b32"
   on-orchard: "#ffffff"
@@ -150,7 +150,7 @@ A sunlit green palette: one orchard green for action, a lime sprout for highligh
 ### Primary
 - **Orchard Green** (`--color-primary`): The brand green inherited from anhnhuy.com. It draws the scroll progress bar, focus rings, input focus and icons next to facts (phone, badge ticks). It is too light to carry white text.
 - **Orchard Fill / Fill Hover / On Orchard** (`--color-primary-fill`, `--color-primary-fill-hover`, `--color-on-primary`): Every filled green surface that carries text: primary buttons, product labels, the highlight card, the CTA band, the call button and the open FAQ toggle. White on the fill measures about 5:1, and the same values hold in dark mode.
-- **Orchard Green Deep** (`--color-primary-strong`): Hover state for primary buttons, plus green text on light grounds (eyebrows, active nav link, chip text), where the lighter green would miss contrast.
+- **Orchard Green Deep** (`--color-primary-strong`): Green text on light grounds (eyebrows, active nav link, chip text), where the lighter green would miss contrast.
 - **Leaf Wash** (`--color-primary-soft`): Tinted fill behind chips and card icon tiles.
 
 ### Secondary
@@ -210,7 +210,7 @@ Dark mode (`prefers-color-scheme: dark`) remaps the same roles. The green lifts 
 - **Header:** sticky, 72px (64px mobile), frosted translucent background, border and faint shadow once scrolled, 3px green-to-lime reading-progress bar along its bottom edge.
 - **Grids:** text/photo splits on the home hero, about and product pages; three-column card grids for reasons and testimonials; a four-up stats strip; footer columns at 1.4 / 0.8 / 1.2.
 - **Breakpoints:** 1080px hides the header phone number; 960px collapses split layouts to one column; 860px swaps desktop nav and CTA for the menu button and full-screen mobile menu, and footer goes 2-up; 560px stacks everything to one column.
-- **Floating actions:** call, Zalo, Facebook and back-to-top buttons stay pinned bottom-right on every page. At ≤640px Facebook drops out (it stays in the footer), and the dock hides while a form field has focus.
+- **Floating actions:** call, Zalo, Facebook and back-to-top buttons stay pinned bottom-right on every page. At ≤640px only Zalo and Call remain (Facebook stays in the footer, back-to-top is left to the OS), and the dock hides while a form field has focus. The Zalo button shows Zalo's wordmark, not a generic chat icon.
 
 ## Elevation & Depth
 
@@ -266,7 +266,7 @@ Rounded, sunny and tactile: pills that shine and press.
 ### Section Blocks (signature)
 - **Page hero:** Morning Mist band with a lime radial glow and a slowly drifting blurred blob behind the title.
 - **Stats strip:** large animated count-up numbers with labels, divided by hairlines.
-- **Testimonials:** quote cards with five stars, anonymous attribution.
+- **Testimonials:** quote cards with the quote alone, no stars or per-quote author; the section lead states once that partners are kept anonymous at their request.
 - **CTA band:** 20px-radius Orchard Fill panel with a faint lime glow, light and ghost actions, and the hotline.
 - **FAQ:** native `<details>` rows with a plus that rotates into a minus, and smooth height animation.
 

@@ -66,13 +66,7 @@ export function Testimonials({ alt = false }: { alt?: boolean }) {
         <div className={styles.quotes} data-reveal="stagger">
           {t.testimonials.items.map((q) => (
             <figure key={q} className={`${styles.quote} glare`} data-tilt="7">
-              <div className={styles.stars} aria-label={t.testimonials.stars}>
-                {Array.from({ length: 5 }, (_, i) => (
-                  <Icon key={i} name="star" size={18} />
-                ))}
-              </div>
               <blockquote>“{q}”</blockquote>
-              <figcaption>{t.testimonials.author}</figcaption>
             </figure>
           ))}
         </div>

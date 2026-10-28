@@ -15,7 +15,7 @@ export const IMAGES = {
 } as const
 
 export const CONTACT = {
-  email: 'Any.binhthuan@gmail.com',
+  email: 'contact@anhnhuy.com',
   phone: '+84 986 565 675',
   phoneHref: 'tel:+84986565675',
   // International format so the numbers dial from abroad too.
@@ -24,10 +24,12 @@ export const CONTACT = {
     { text: '+84 365 606 897', href: 'tel:+84365606897' },
   ],
   zalo: 'https://zalo.me/0986565675',
-  quoteEmail: 'contact@anhnhuy.com',
-  feedbackEmails: ['contact@anhnhuy.com', 'dtt220901@gmail.com'],
   facebook: 'https://www.facebook.com/lieu.oan.523024',
 }
+
+// Query values for /lien-he?product=… so a product page can preselect it in the quote form.
+export const QUOTE_PRODUCTS = { 'dragon-fruit': 3, coconut: 4 } as const
+export type QuoteProduct = keyof typeof QUOTE_PRODUCTS
 
 export const NAV = [
   { to: '/', key: 'home' },

@@ -56,7 +56,9 @@ export function FloatingActions() {
         rel="noreferrer"
         aria-label={t.common.messageZalo}
       >
-        <Icon name="chat" size={22} />
+        <span className={styles.zaloMark} aria-hidden="true">
+          Zalo
+        </span>
         <span className={styles.tip}>Zalo</span>
       </a>
 

@@ -26,7 +26,7 @@ export const vi = {
     call: 'Gọi',
   },
   contact: {
-    address: 'Đường TL 715, xã Hàm Thuận, tỉnh Lâm Đồng',
+    address: 'Đường TL 715, xã Hàm Thuận, tỉnh Lâm Đồng (trước đây thuộc tỉnh Bình Thuận)',
     hours: '9h – 17h (GMT+7)',
   },
   footer: {
@@ -47,9 +47,7 @@ export const vi = {
   testimonials: {
     eyebrow: 'Khách hàng nói gì',
     title: 'Trải nghiệm của khách hàng',
-    lead: 'Nhận xét từ các đối tác đã hợp tác nhiều mùa vụ với Anh Như Ý.',
-    stars: '5 trên 5 sao',
-    author: 'Khách hàng của Anh Như Ý',
+    lead: 'Nhận xét từ các đối tác đã hợp tác nhiều mùa vụ với Anh Như Ý. Theo yêu cầu của khách hàng, chúng tôi không công bố tên.',
     items: [
       'Hợp tác nhiều lần, rất chuyên nghiệp, hàng đến đúng thời hạn.',
       'Gia công đóng gói kĩ, đơn hàng linh hoạt quanh năm.',
@@ -99,13 +97,14 @@ export const vi = {
     sentText: 'Nếu không thấy cửa sổ email, hãy gửi yêu cầu tới địa chỉ dưới đây.',
     copy: 'Sao chép',
     copied: 'Đã sao chép',
+    copyFailed: 'Không sao chép được, hãy chọn địa chỉ và sao chép thủ công.',
     orReach: 'Hoặc liên hệ nhanh qua',
   },
   home: {
     eyebrow: 'Xuất khẩu trái cây tươi Việt Nam',
     // The headline is split into three runs; the middle one gets the shimmer effect.
     title: ['Thanh long tươi', 'chuẩn xuất khẩu', 'từ Bình Thuận'],
-    lead: 'Nguồn cung dồi dào, luôn sẵn sàng và cam kết chất lượng ổn định, đáp ứng mọi nhu cầu hợp tác B2B.',
+    lead: 'Thanh long ruột trắng, ruột đỏ, vỏ vàng size 350–650g, đóng thùng 4–18kg theo yêu cầu. Đạt GlobalGAP, VietGAP, giao hàng 7–10 ngày làm việc.',
     viewProducts: 'Xem sản phẩm',
     badges: ['GlobalGAP', 'VietGAP', 'Đóng gói theo yêu cầu'],
     heroAlt: 'Thanh long đỏ xếp đầy nhà đóng gói của Anh Như Ý',
@@ -114,30 +113,30 @@ export const vi = {
     exportStandard: 'Chuẩn xuất khẩu',
     reasonsEyebrow: 'Giá trị cốt lõi',
     reasonsTitle: 'Vì sao nên chọn chúng tôi',
-    reasonsLead: 'Chuỗi cung ứng ổn định, kiểm soát chất lượng nghiêm ngặt và quy trình bảo quản hiện đại.',
+    reasonsLead: 'Chúng tôi tự trồng, tự phân loại và tự đóng gói tại Hàm Thuận, nên kiểm soát được từng thùng hàng.',
     reasons: [
       {
         title: 'Nguồn cung ổn định',
         points: [
-          'Nguyên liệu từ các vùng trồng đạt chuẩn, sản lượng ổn định quanh năm.',
-          'Kho lạnh và logistics chuyên nghiệp giữ chất lượng suốt quá trình vận chuyển.',
-          'Giao hàng đúng lịch cam kết.',
+          'Vùng trồng tại Hàm Thuận, “thủ phủ thanh long”, cho sản lượng quanh năm.',
+          'Hơn 200 nhân sự và hơn 10 năm kinh nghiệm gia công thanh long.',
+          'Giao hàng 7–10 ngày làm việc, đúng lịch đã thống nhất.',
         ],
       },
       {
-        title: 'Cạnh tranh về giá',
+        title: 'Báo giá rõ ràng',
         points: [
-          'Chính sách đặc biệt cho các đơn hàng số lượng lớn.',
-          'Giá cả ổn định, minh bạch, không phát sinh chi phí ẩn.',
-          'Chi phí nhập khẩu hợp lý hơn, tăng biên lợi nhuận cho đối tác.',
+          'Báo giá theo từng đơn: giống, size, quy cách thùng và điều kiện giao hàng (FOB, CIF…).',
+          'Chính sách riêng cho đơn số lượng lớn và hợp đồng dài hạn.',
+          'Giá minh bạch, không phát sinh chi phí ẩn.',
         ],
       },
       {
         title: 'Thanh long chất lượng cao',
         points: [
-          'Thu hoạch trực tiếp từ nông trại, chọn lọc theo tiêu chuẩn xuất khẩu.',
-          'Đảm bảo độ tươi, ngọt, màu sắc đẹp, không dập nát.',
-          'Sản phẩm đạt chứng nhận GlobalGAP.',
+          'Hai mức size 350–450g và 450–650g, chọn lọc theo chuẩn xuất khẩu.',
+          'Tươi, đúng màu, không dập nát khi đóng thùng.',
+          'Đạt chứng nhận GlobalGAP và VietGAP.',
         ],
       },
     ],
@@ -161,10 +160,6 @@ export const vi = {
         text: 'Dừa nguyên trái và dừa non gọt “kim cương”, bảo quản lạnh 0 đến 2°C trong container.',
       },
     ],
-    commitEyebrow: 'Cam kết',
-    commitTitle: 'Tươi ngon, an toàn và đạt chuẩn quốc tế',
-    commitLead:
-      'Với hệ thống chuỗi cung ứng ổn định, kiểm soát chất lượng nghiêm ngặt và quy trình bảo quản hiện đại, chúng tôi cam kết mang đến sản phẩm tươi ngon, an toàn cho các thị trường khó tính nhất.',
     storefrontAlt: 'Cửa hàng Anh Như Ý về đêm, biển hiệu sáng đèn',
     marketsLabel: 'Thị trường xuất khẩu',
     achievementsEyebrow: 'Thành tựu',
@@ -237,6 +232,8 @@ export const vi = {
       { label: 'Thời gian giao hàng', value: '7 đến 10 ngày làm việc' },
     ],
     newProduct: 'Sản phẩm mới, cơ hội mới',
+    quoteDragonFruit: 'Yêu cầu báo giá thanh long',
+    quoteCoconut: 'Yêu cầu báo giá dừa tươi',
     coconutText:
       'Bên cạnh thế mạnh về thanh long, chúng tôi đang đẩy mạnh phát triển dừa tươi: loại nông sản giàu giá trị dinh dưỡng, có tiềm năng xuất khẩu lớn và được ưa chuộng tại nhiều thị trường quốc tế. Với kinh nghiệm quản lý chất lượng và hệ thống cung ứng sẵn có, dừa sẽ là sản phẩm chiến lược tiếp theo của Anh Như Ý.',
     coconutSpecs: [
@@ -273,7 +270,15 @@ export const vi = {
     phonePlaceholder: '0912 345 678',
     product: 'Sản phẩm quan tâm',
     productPlaceholder: 'Chọn sản phẩm',
-    productOptions: ['Thanh long ruột trắng', 'Thanh long ruột đỏ', 'Thanh long vỏ vàng', 'Dừa tươi', 'Gia công đóng gói', 'Khác'],
+    productOptions: [
+      'Thanh long ruột trắng',
+      'Thanh long ruột đỏ',
+      'Thanh long vỏ vàng',
+      'Thanh long, nhiều loại',
+      'Dừa tươi',
+      'Gia công đóng gói',
+      'Khác',
+    ],
     volume: 'Số lượng dự kiến',
     volumePlaceholder: 'VD: 1 container 40ft, 5 tấn/tuần',
     destination: 'Thị trường / cảng đến',

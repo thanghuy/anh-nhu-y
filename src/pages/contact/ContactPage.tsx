@@ -5,7 +5,9 @@ import { Icon } from '@/components/ui/Icon'
 import type { IconName } from '@/components/ui/Icon'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { useI18n } from '@/i18n/context'
-import { CONTACT } from '@/lib/site'
+import { useSearchParams } from 'react-router-dom'
+import { CONTACT, QUOTE_PRODUCTS } from '@/lib/site'
+import type { QuoteProduct } from '@/lib/site'
 import styles from '../pages.module.css'
 
 interface Channel {
@@ -18,6 +20,10 @@ export function ContactPage() {
   const { t } = useI18n()
   const c = t.contactPage
   useDocumentTitle(t.meta.contact)
+  const [params] = useSearchParams()
+  const productParam = params.get('product')
+  const initialProduct =
+    productParam && productParam in QUOTE_PRODUCTS ? c.productOptions[QUOTE_PRODUCTS[productParam as QuoteProduct]] : undefined
 
   const channels: Channel[] = [
     {
@@ -32,7 +38,7 @@ export function ContactPage() {
     {
       icon: 'mail',
       title: c.email,
-      items: [CONTACT.email, ...CONTACT.feedbackEmails].map((e) => ({ text: e, href: `mailto:${e}` })),
+      items: [{ text: CONTACT.email, href: `mailto:${CONTACT.email}` }],
     },
     { icon: 'pin', title: c.address, items: [{ text: t.contact.address }] },
     { icon: 'clock', title: c.hours, items: [{ text: t.contact.hours }] },
@@ -68,7 +74,8 @@ export function ContactPage() {
             <h2>{c.formTitle}</h2>
             <p className={styles.formIntro}>{c.formIntro}</p>
             <MailForm
-              to={CONTACT.quoteEmail}
+              to={CONTACT.email}
+              initialValues={initialProduct ? { product: initialProduct } : undefined}
               subject={c.subject}
               fields={[
                 { name: 'name', label: c.name, autoComplete: 'name', placeholder: c.namePlaceholder },
@@ -95,10 +102,11 @@ export function ContactPage() {
                   placeholder: c.productPlaceholder,
                   options: c.productOptions,
                 },
-                { name: 'volume', label: c.volume, placeholder: c.volumePlaceholder },
+                { name: 'volume', label: c.volume, required: true, placeholder: c.volumePlaceholder },
                 {
                   name: 'destination',
                   label: c.destination,
+                  required: true,
                   autoComplete: 'country-name',
                   placeholder: c.destinationPlaceholder,
                   wide: true,

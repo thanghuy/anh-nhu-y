@@ -219,6 +219,11 @@
 }
 
 /* Contact */
+.quoteCta {
+  justify-self: start;
+  white-space: normal;
+}
+
 .contact {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);

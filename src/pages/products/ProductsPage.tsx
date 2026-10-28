@@ -1,4 +1,5 @@
 import { CtaBand, PageHero } from '@/components/sections/Sections'
+import { ButtonLink } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
 import { useDocumentTitle } from '@/hooks/useDocumentTitle'
 import { useI18n } from '@/i18n/context'
@@ -65,6 +66,10 @@ export function ProductsPage() {
               ))}
             </ul>
             <SpecList specs={p.dragonFruitSpecs} />
+            <ButtonLink to="/lien-he?product=dragon-fruit" className={styles.quoteCta}>
+              {p.quoteDragonFruit}
+              <Icon name="arrowRight" size={18} />
+            </ButtonLink>
           </div>
         </div>
       </section>
@@ -79,6 +84,10 @@ export function ProductsPage() {
             <h2>{p.coconut}</h2>
             <p className={styles.body}>{p.coconutText}</p>
             <SpecList specs={p.coconutSpecs} />
+            <ButtonLink to="/lien-he?product=coconut" className={styles.quoteCta}>
+              {p.quoteCoconut}
+              <Icon name="arrowRight" size={18} />
+            </ButtonLink>
           </div>
           <figure className={`${styles.photo} glare`} data-reveal="zoom" data-tilt="6">
             <img

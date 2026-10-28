@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-28T14:17:22+00:00",
+  "generatedAt": "2026-10-28T14:31:06+00:00",
   "title": "Design System: Anh Như Ý",
   "extensions": {
     "colorMeta": {
@@ -22,16 +22,16 @@
       "orchard-green-deep": {
         "role": "primary",
         "displayName": "Orchard Green Deep",
-        "canonical": "#23803c",
+        "canonical": "#1f7536",
         "tonalRamp": [
           "#001100",
-          "#002f0b",
-          "#08501f",
-          "#1d7435",
-          "#4a9559",
-          "#7bb683",
-          "#aad7af",
-          "#d9f8dd"
+          "#002f0c",
+          "#0a5020",
+          "#1e7435",
+          "#53935e",
+          "#82b389",
+          "#b0d4b4",
+          "#dff6e2"
         ]
       },
       "orchard-fill": {

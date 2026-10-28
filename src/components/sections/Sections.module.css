@@ -113,25 +113,13 @@
   transform: translateZ(28px);
 }
 
-.stars {
-  transform: translateZ(44px);
-  display: flex;
-  gap: 2px;
-  color: var(--color-sun);
-}
-
 .quote blockquote {
   margin: 0;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(1.125rem, 0.8vw + 0.9rem, 1.375rem);
+  font-size: clamp(var(--text-lg), 0.6vw + 0.95rem, var(--text-xl));
   line-height: var(--leading-snug);
   letter-spacing: 0;
-}
-
-.quote figcaption {
-  font-size: var(--text-xs);
-  color: var(--color-muted);
 }
 
 /* CTA band */

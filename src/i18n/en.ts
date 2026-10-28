@@ -27,7 +27,7 @@ export const en: Dict = {
     call: 'Call',
   },
   contact: {
-    address: 'TL 715 Road, Ham Thuan Commune, Lam Dong Province, Vietnam',
+    address: 'TL 715 Road, Ham Thuan Commune, Lam Dong Province (formerly Binh Thuan), Vietnam',
     hours: '9 AM – 5 PM (GMT+7, Vietnam time)',
   },
   footer: {
@@ -48,9 +48,7 @@ export const en: Dict = {
   testimonials: {
     eyebrow: 'What clients say',
     title: 'Customer experiences',
-    lead: 'Feedback from partners who have worked with Anh Như Ý across many seasons.',
-    stars: '5 out of 5 stars',
-    author: 'Anh Như Ý customer',
+    lead: 'Feedback from partners who have worked with Anh Như Ý across many seasons. At their request, we do not publish their names.',
     items: [
       'We have worked together many times: very professional, and goods always arrive on time.',
       'Careful packing and flexible orders all year round.',
@@ -100,12 +98,13 @@ export const en: Dict = {
     sentText: 'If no email window appeared, send your request to the address below.',
     copy: 'Copy',
     copied: 'Copied',
+    copyFailed: 'Could not copy. Select the address and copy it manually.',
     orReach: 'Or reach us directly on',
   },
   home: {
     eyebrow: 'Fresh fruit exports from Vietnam',
     title: ['Fresh dragon fruit,', 'export grade,', 'from Binh Thuan'],
-    lead: 'Abundant, always-ready supply and consistent quality to meet every B2B partnership need.',
+    lead: 'White-flesh, red-flesh and yellow dragon fruit, 350–650 g grades, packed in 4–18 kg cartons to your spec. GlobalGAP and VietGAP certified, shipped in 7–10 working days.',
     viewProducts: 'View products',
     badges: ['GlobalGAP', 'VietGAP', 'Custom packing'],
     heroAlt: 'Red dragon fruit filling the Anh Như Ý packing hall',
@@ -114,30 +113,30 @@ export const en: Dict = {
     exportStandard: 'Export standard',
     reasonsEyebrow: 'Core values',
     reasonsTitle: 'Why choose us',
-    reasonsLead: 'A stable supply chain, strict quality control and modern storage processes.',
+    reasonsLead: 'We grow, grade and pack in Ham Thuan ourselves, so we control every carton that leaves.',
     reasons: [
       {
         title: 'Reliable supply',
         points: [
-          'Sourced from certified growing regions with steady year-round output.',
-          'Professional cold storage and logistics keep quality intact throughout transport.',
-          'Deliveries on the committed schedule.',
+          'Grown in Ham Thuan, Vietnam’s “dragon fruit capital”, with year-round output.',
+          '200+ staff and more than 10 years of dragon fruit processing.',
+          'Shipped in 7–10 working days, on the agreed schedule.',
         ],
       },
       {
-        title: 'Competitive pricing',
+        title: 'Clear quotes',
         points: [
-          'Special terms for large-volume orders.',
-          'Stable, transparent pricing with no hidden costs.',
-          'Lower import costs that raise our partners’ margins.',
+          'Quoted per order: variety, size grade, carton spec and Incoterm (FOB, CIF…).',
+          'Dedicated terms for large-volume orders and long-term contracts.',
+          'Transparent pricing with no hidden costs.',
         ],
       },
       {
         title: 'Premium dragon fruit',
         points: [
-          'Harvested straight from the farm and graded to export standards.',
-          'Fresh, sweet, beautifully coloured and free of bruising.',
-          'GlobalGAP-certified products.',
+          'Two size grades, 350–450 g and 450–650 g, sorted to export standard.',
+          'Fresh, true colour and free of bruising when packed.',
+          'GlobalGAP and VietGAP certified.',
         ],
       },
     ],
@@ -161,14 +160,10 @@ export const en: Dict = {
         text: 'Whole coconuts and “diamond-cut” young coconuts, kept at 0 to 2 °C in reefer containers.',
       },
     ],
-    commitEyebrow: 'Our promise',
-    commitTitle: 'Fresh, safe and up to international standards',
-    commitLead:
-      'With a stable supply chain, strict quality control and modern storage, we deliver fresh, safe produce to the most demanding markets.',
     storefrontAlt: 'The Anh Như Ý storefront at night with its sign lit up',
     marketsLabel: 'Export markets',
     achievementsEyebrow: 'Achievements',
-    achievementsTitle: 'Highlights',
+    achievementsTitle: 'Track record',
     achievements: [
       'One of Vietnam’s 100 outstanding farmers, named Excellent Vietnamese Farmer 2023',
       'Honoured by a visit from Acting State President Nguyễn Thị Ánh Xuân',
@@ -236,6 +231,8 @@ export const en: Dict = {
       { label: 'Lead time', value: '7 to 10 working days' },
     ],
     newProduct: 'New product, new opportunity',
+    quoteDragonFruit: 'Request a dragon fruit quote',
+    quoteCoconut: 'Request a coconut quote',
     coconutText:
       'Alongside our strength in dragon fruit, we are growing our fresh coconut line: a nutritious crop with strong export potential and wide appeal in international markets. With our quality management experience and existing supply network, coconut is Anh Như Ý’s next strategic product.',
     coconutSpecs: [
@@ -272,7 +269,15 @@ export const en: Dict = {
     phonePlaceholder: '+31 6 1234 5678',
     product: 'Product',
     productPlaceholder: 'Choose a product',
-    productOptions: ['White-flesh dragon fruit', 'Red-flesh dragon fruit', 'Yellow dragon fruit', 'Fresh coconut', 'Contract packing', 'Other'],
+    productOptions: [
+      'White-flesh dragon fruit',
+      'Red-flesh dragon fruit',
+      'Yellow dragon fruit',
+      'Dragon fruit, mixed varieties',
+      'Fresh coconut',
+      'Contract packing',
+      'Other',
+    ],
     volume: 'Expected volume',
     volumePlaceholder: 'e.g. one 40ft reefer, 5 t/week',
     destination: 'Destination market / port',
