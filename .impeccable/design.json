@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T14:00:06+00:00",
+  "title": "Design System: Anh Như Ý",
+  "extensions": {
+    "colorMeta": {
+      "orchard-green": {
+        "role": "primary",
+        "displayName": "Orchard Green",
+        "canonical": "#31a050",
+        "tonalRamp": [
+          "#001100",
+          "#002f0b",
+          "#03501f",
+          "#197435",
+          "#2e9a4c",
+          "#62bc75",
+          "#94dea1",
+          "#c5ffce"
+        ]
+      },
+      "orchard-green-deep": {
+        "role": "primary",
+        "displayName": "Orchard Green Deep",
+        "canonical": "#23803c",
+        "tonalRamp": [
+          "#001100",
+          "#002f0b",
+          "#08501f",
+          "#1d7435",
+          "#4a9559",
+          "#7bb683",
+          "#aad7af",
+          "#d9f8dd"
+        ]
+      },
+      "leaf-wash": {
+        "role": "primary",
+        "displayName": "Leaf Wash",
+        "canonical": "#eef8e8",
+        "tonalRamp": [
+          "#0a0c09",
+          "#232621",
+          "#3f433d",
+          "#5e635b",
+          "#7e857b",
+          "#a0a89c",
+          "#c4ccbf",
+          "#e8f2e2"
+        ]
+      },
+      "sprout-lime": {
+        "role": "secondary",
+        "displayName": "Sprout Lime",
+        "canonical": "#7ed957",
+        "tonalRamp": [
+          "#001100",
+          "#0b2e00",
+          "#214e08",
+          "#39711e",
+          "#519632",
+          "#6bbd48",
+          "#8ce468",
+          "#b9ff9b"
+        ]
+      },
+      "sprout-lime-soft": {
+        "role": "secondary",
+        "displayName": "Sprout Lime Soft",
+        "canonical": "#a2e187",
+        "tonalRamp": [
+          "#030f00",
+          "#162c0b",
+          "#2e4b21",
+          "#486d38",
+          "#649150",
+          "#81b66a",
+          "#9fdd85",
+          "#c8ffb0"
+        ]
+      },
+      "dragon-fruit-pink": {
+        "role": "tertiary",
+        "displayName": "Dragon Fruit Pink",
+        "canonical": "#e0447c",
+        "tonalRamp": [
+          "#210008",
+          "#4a0120",
+          "#76143b",
+          "#a62a58",
+          "#d84177",
+          "#f9709b",
+          "#ffa0c0",
+          "#ffcee7"
+        ]
+      },
+      "harvest-sun": {
+        "role": "tertiary",
+        "displayName": "Harvest Sun",
+        "canonical": "#f2c94c",
+        "tonalRamp": [
+          "#130900",
+          "#312300",
+          "#523f00",
+          "#765e0a",
+          "#9c7f20",
+          "#c4a135",
+          "#edc549",
+          "#ffeb80"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "morning-mist": {
+        "role": "neutral",
+        "displayName": "Morning Mist",
+        "canonical": "#f5faf2",
+        "tonalRamp": [
+          "#0a0b0a",
+          "#242623",
+          "#41433f",
+          "#60625e",
+          "#80837e",
+          "#a3a6a0",
+          "#c6cbc4",
+          "#ebf0e8"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1d1e20",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#242527",
+          "#414244",
+          "#606163",
+          "#818284",
+          "#a4a5a6",
+          "#c8c9ca",
+          "#eeeeef"
+        ]
+      },
+      "stem-grey": {
+        "role": "neutral",
+        "displayName": "Stem Grey",
+        "canonical": "#555a57",
+        "tonalRamp": [
+          "#0a0c0a",
+          "#232624",
+          "#3f4341",
+          "#5e6360",
+          "#7f8381",
+          "#a2a6a4",
+          "#c7cac8",
+          "#edefee"
+        ]
+      },
+      "dew-line": {
+        "role": "neutral",
+        "displayName": "Dew Line",
+        "canonical": "#e4ebe1",
+        "tonalRamp": [
+          "#0a0c0a",
+          "#242623",
+          "#40433f",
+          "#5f625d",
+          "#7f847d",
+          "#a2a79f",
+          "#c5cbc2",
+          "#eaf1e7"
+        ]
+      },
+      "night-field": {
+        "role": "neutral",
+        "displayName": "Night Field",
+        "canonical": "#0d141a",
+        "tonalRamp": [
+          "#060c11",
+          "#1f262c",
+          "#3c4349",
+          "#5c6267",
+          "#7e8388",
+          "#a1a6aa",
+          "#c6cacd",
+          "#eceff1"
+        ]
+      },
+      "on-night": {
+        "role": "neutral",
+        "displayName": "On Night",
+        "canonical": "#e9f0ea",
+        "tonalRamp": [
+          "#0a0c0a",
+          "#242624",
+          "#404340",
+          "#5f625f",
+          "#7f8480",
+          "#a1a7a2",
+          "#c5cbc6",
+          "#eaf1eb"
+        ]
+      },
+      "on-night-muted": {
+        "role": "neutral",
+        "displayName": "On Night Muted",
+        "canonical": "#9aa8a0",
+        "tonalRamp": [
+          "#090c0a",
+          "#212723",
+          "#3d4440",
+          "#5a645e",
+          "#7a867f",
+          "#9ba9a1",
+          "#c0cdc5",
+          "#e7f2eb"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Page h1; the home hero splits it into three runs with a shimmering middle phrase."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2 after the eyebrow."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card, product and channel h3."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Stem Grey paragraph under a section head, max 60ch."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text."
+      },
+      "label": {
+        "displayName": "Eyebrow / Label",
+        "purpose": "Uppercase eyebrow with a 20px lime rule; footer titles; brand subline."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card",
+        "value": "0 1px 2px rgb(13 20 26 / 0.04), 0 8px 24px rgb(13 20 26 / 0.06)",
+        "purpose": "Cards, quotes and channel tiles at rest."
+      },
+      {
+        "name": "lift",
+        "value": "0 2px 4px rgb(13 20 26 / 0.05), 0 16px 40px rgb(13 20 26 / 0.1)",
+        "purpose": "The same surfaces on hover."
+      },
+      {
+        "name": "green-glow",
+        "value": "0 6px 18px color-mix(in srgb, var(--color-primary) 30%, transparent)",
+        "purpose": "Primary button at rest."
+      },
+      {
+        "name": "green-glow-hover",
+        "value": "0 2px 0 color-mix(in srgb, var(--color-primary-strong) 70%, #000), 0 14px 30px color-mix(in srgb, var(--color-primary) 40%, transparent)",
+        "purpose": "Primary button on hover."
+      },
+      {
+        "name": "pill-inset",
+        "value": "0 1px 3px rgb(13 20 26 / 0.08)",
+        "purpose": "Active nav link and language toggle."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Default easing for reveals, lifts and tilts."
+      },
+      {
+        "name": "reveal",
+        "value": "1s var(--ease) backwards",
+        "purpose": "Scroll reveals (up, left, right, zoom, stagger flip); fill backwards only."
+      },
+      {
+        "name": "word-flip",
+        "value": "wordIn 1s var(--ease), 70ms stagger + 150ms",
+        "purpose": "Headline words flip up one by one."
+      },
+      {
+        "name": "shimmer",
+        "value": "5s ease-in-out infinite",
+        "purpose": "Green-to-lime sweep on the key headline phrase."
+      },
+      {
+        "name": "tilt",
+        "value": "--rx/--ry 0.4s var(--ease), lift -6px",
+        "purpose": "Card 3D pointer tilt with glare."
+      },
+      {
+        "name": "page-enter",
+        "value": "0.7s var(--ease)",
+        "purpose": "Route change entrance."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "560px"
+      },
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "860px"
+      },
+      {
+        "name": "lg",
+        "value": "960px"
+      },
+      {
+        "name": "xl",
+        "value": "1080px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one green call to action: quote requests and main navigation actions.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Nhận báo giá <svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 12px 24px; border-radius: 999px; border: 1.5px solid transparent; font: 600 15px/1.4 'Be Vietnam Pro', system-ui, sans-serif; cursor: pointer; position: relative; overflow: hidden; isolation: isolate; transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .15s ease, box-shadow .2s ease; } .ds-btn::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(110deg, transparent 30%, rgb(255 255 255 / .45) 50%, transparent 70%); translate: -120% 0; } .ds-btn:hover::before { translate: 120% 0; transition: translate .75s cubic-bezier(.16,1,.3,1); } .ds-btn svg { transition: transform .2s cubic-bezier(.16,1,.3,1); } .ds-btn:hover svg { transform: translateX(3px); } .ds-btn:active { transform: scale(.98); } .ds-btn:focus-visible { outline: 2px solid var(--color-primary, #31a050); outline-offset: 3px; } .ds-btn-primary { background: var(--color-primary, #31a050); color: #fff; box-shadow: 0 6px 18px color-mix(in srgb, var(--color-primary, #31a050) 30%, transparent); } .ds-btn-primary:hover { background: var(--color-primary-strong, #23803c); box-shadow: 0 2px 0 color-mix(in srgb, var(--color-primary-strong, #23803c) 70%, #000), 0 14px 30px color-mix(in srgb, var(--color-primary, #31a050) 40%, transparent); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action beside a primary button.",
+      "html": "<button class=\"ds-btn-ghost\">Xem sản phẩm</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; min-height: 48px; padding: 12px 24px; border-radius: 999px; border: 1.5px solid var(--color-border, #e4ebe1); background: transparent; color: var(--color-text, #1d1e20); font: 600 15px/1.4 'Be Vietnam Pro', system-ui, sans-serif; cursor: pointer; transition: border-color .2s ease, color .2s ease, transform .15s ease; } .ds-btn-ghost:hover { border-color: var(--color-primary, #31a050); color: var(--color-primary-strong, #23803c); } .ds-btn-ghost:active { transform: scale(.98); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--color-primary, #31a050); outline-offset: 3px; }"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "White action on green or dark bands, e.g. the CTA band.",
+      "html": "<div class=\"ds-band\"><button class=\"ds-btn-light\">Liên hệ báo giá</button></div>",
+      "css": ".ds-band { padding: 24px; border-radius: 20px; background: var(--color-primary, #31a050); } .ds-btn-light { display: inline-flex; align-items: center; min-height: 48px; padding: 12px 24px; border-radius: 999px; border: 0; background: #fff; color: var(--color-dark, #0d141a); font: 600 15px/1.4 'Be Vietnam Pro', system-ui, sans-serif; cursor: pointer; transition: background-color .2s ease, transform .15s ease; } .ds-btn-light:hover { background: var(--color-accent-soft, #a2e187); } .ds-btn-light:active { transform: scale(.98); } .ds-btn-light:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "The shared Card: icon tile, title, body; lifts and tilts on hover.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-icon\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 13l4 4L19 7\"/></svg></div><h3 class=\"ds-card-title\">Nguồn cung ổn định</h3><p class=\"ds-card-body\">Nguyên liệu từ các vùng trồng đạt chuẩn, sản lượng ổn định quanh năm.</p></article>",
+      "css": ".ds-card { max-width: 340px; display: flex; flex-direction: column; background: var(--color-surface, #fff); border: 1px solid var(--color-border, #e4ebe1); border-radius: 12px; box-shadow: 0 1px 2px rgb(13 20 26 / .04), 0 8px 24px rgb(13 20 26 / .06); padding: clamp(22px, 2.5vw, 32px); transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .3s cubic-bezier(.16,1,.3,1), border-color .25s ease; } .ds-card:hover { transform: perspective(1000px) rotateX(3deg) rotateY(-4deg) translateY(-6px); box-shadow: 0 2px 4px rgb(13 20 26 / .05), 0 16px 40px rgb(13 20 26 / .1); border-color: color-mix(in srgb, var(--color-primary, #31a050) 40%, var(--color-border, #e4ebe1)); } .ds-card-icon { width: 48px; height: 48px; display: grid; place-items: center; border-radius: 12px; background: var(--color-primary-soft, #eef8e8); color: var(--color-primary-strong, #23803c); margin-bottom: 20px; } .ds-card-title { margin: 0 0 10px; font: 700 1.25rem/1.3 Montserrat, 'Be Vietnam Pro', sans-serif; color: var(--color-text, #1d1e20); } .ds-card-body { margin: 0; font: 400 1rem/1.7 'Be Vietnam Pro', system-ui, sans-serif; color: var(--color-muted, #555a57); }"
+    },
+    {
+      "name": "Highlight Card",
+      "kind": "card",
+      "refersTo": "card-highlight",
+      "description": "Green card variant used once per group to emphasise one reason.",
+      "html": "<article class=\"ds-card-hl\"><h3>Thanh long chất lượng cao</h3><p>Thu hoạch trực tiếp từ nông trại, chọn lọc theo tiêu chuẩn xuất khẩu.</p></article>",
+      "css": ".ds-card-hl { max-width: 340px; padding: clamp(22px, 2.5vw, 32px); border-radius: 12px; border: 1px solid var(--color-primary, #31a050); color: #fff; background: radial-gradient(120% 80% at 100% 0%, color-mix(in srgb, var(--color-accent, #7ed957) 45%, transparent), transparent 60%), var(--color-primary, #31a050); box-shadow: 0 1px 2px rgb(13 20 26 / .04), 0 8px 24px rgb(13 20 26 / .06); transition: transform .4s cubic-bezier(.16,1,.3,1), box-shadow .3s; } .ds-card-hl:hover { transform: translateY(-6px); box-shadow: 0 2px 4px rgb(13 20 26 / .05), 0 16px 40px rgb(13 20 26 / .1); } .ds-card-hl h3 { margin: 0 0 10px; font: 700 1.25rem/1.3 Montserrat, sans-serif; } .ds-card-hl p { margin: 0; font: 400 1rem/1.7 'Be Vietnam Pro', sans-serif; color: rgb(255 255 255 / .92); }"
+    },
+    {
+      "name": "Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Leaf-wash pills for varieties and markets; solid label for product status.",
+      "html": "<div class=\"ds-chips\"><span class=\"ds-label\">Sản phẩm chủ lực</span><span class=\"ds-chip\">Ruột trắng</span><span class=\"ds-chip\">Ruột đỏ</span><span class=\"ds-chip\">Vỏ vàng</span></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ds-chip { padding: 7px 14px; border-radius: 999px; background: var(--color-primary-soft, #eef8e8); color: var(--color-primary-strong, #23803c); font: 500 15px/1.4 'Be Vietnam Pro', sans-serif; } .ds-label { padding: 6px 14px; border-radius: 999px; background: var(--color-primary, #31a050); color: #fff; font: 600 14px/1.4 'Be Vietnam Pro', sans-serif; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Quote form field with label above and a green focus halo.",
+      "html": "<label class=\"ds-field\"><span>Email liên hệ <b>*</b></span><input type=\"email\" placeholder=\"ban@congty.com\"></label>",
+      "css": ".ds-field { display: grid; gap: 8px; max-width: 360px; font: 500 15px/1.5 'Be Vietnam Pro', sans-serif; color: var(--color-text, #1d1e20); } .ds-field b { color: var(--color-primary-strong, #23803c); font-weight: 500; } .ds-field input { min-height: 50px; padding: 12px 16px; border: 1.5px solid var(--color-border, #e4ebe1); border-radius: 12px; background: var(--color-bg, #fff); color: inherit; font: 400 1rem 'Be Vietnam Pro', sans-serif; transition: border-color .2s ease, box-shadow .2s ease; } .ds-field input:hover { border-color: color-mix(in srgb, var(--color-primary, #31a050) 40%, var(--color-border, #e4ebe1)); } .ds-field input:focus { outline: none; border-color: var(--color-primary, #31a050); box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primary, #31a050) 18%, transparent); }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link-active",
+      "description": "Desktop pill-track nav with a raised white active pill.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"is-active\">Trang chủ</a><a href=\"#\">Giới thiệu</a><a href=\"#\">Sản phẩm</a><a href=\"#\">Liên hệ</a></nav>",
+      "css": ".ds-nav { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: color-mix(in srgb, var(--color-bg-alt, #f5faf2) 80%, transparent); border: 1px solid var(--color-border, #e4ebe1); } .ds-nav a { padding: 8px 18px; border-radius: 999px; color: var(--color-muted, #555a57); text-decoration: none; font: 500 15px/1.4 'Be Vietnam Pro', sans-serif; transition: color .2s ease, background-color .2s ease; } .ds-nav a:hover { color: var(--color-text, #1d1e20); } .ds-nav a:focus-visible { outline: 2px solid var(--color-primary, #31a050); outline-offset: 2px; } .ds-nav a.is-active { background: var(--color-surface, #fff); color: var(--color-primary-strong, #23803c); font-weight: 600; box-shadow: 0 1px 3px rgb(13 20 26 / .08); }"
+    },
+    {
+      "name": "Eyebrow Section Head",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "The eyebrow → headline → lead trio that opens every section.",
+      "html": "<div class=\"ds-head\"><span class=\"ds-eyebrow\">Giá trị cốt lõi</span><h2>Vì sao nên chọn chúng tôi</h2><p>Chuỗi cung ứng ổn định, kiểm soát chất lượng nghiêm ngặt và quy trình bảo quản hiện đại.</p></div>",
+      "css": ".ds-head { display: grid; gap: 14px; max-width: 720px; } .ds-eyebrow { display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1.5 'Be Vietnam Pro', sans-serif; letter-spacing: .06em; text-transform: uppercase; color: var(--color-primary-strong, #23803c); } .ds-eyebrow::before { content: ''; width: 20px; height: 2px; border-radius: 2px; background: var(--color-accent, #7ed957); } .ds-head h2 { margin: 0; font: 800 clamp(1.625rem, 2vw + .85rem, 2.5rem)/1.3 Montserrat, sans-serif; letter-spacing: -.01em; color: var(--color-text, #1d1e20); } .ds-head p { margin: 0; font: 400 1.0625rem/1.7 'Be Vietnam Pro', sans-serif; color: var(--color-muted, #555a57); max-width: 60ch; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Sunlit Orchard",
+    "overview": "The site should feel like walking a dragon fruit farm in Bình Thuận at mid-morning: bright, open, green, and alive. White and pale-leaf surfaces stand in for daylight. One confident orchard green carries every action. Real photography of fields, harvesters, packing halls and stacked cartons does the persuading, because the buyer is checking that the fruit and the operation are real.\n\nMotion is part of the identity, not garnish. Headlines flip up word by word. Cards tilt in 3D under the cursor and catch a soft glare. Glossy fruit-colored orbs drift with the pointer in the hero. Photos parallax as they scroll past, and sections rise into place as they enter. All of it switches off under `prefers-reduced-motion`. Under the liveliness, the content stays plain and factual: specs, certifications and contact channels are always one glance away.\n\nDensity is generous: wide section padding, a 1200px container, and roomy line heights tuned so Vietnamese stacked diacritics never clip.",
+    "keyCharacteristics": [
+      "Daylight surfaces (white, pale leaf) with one orchard-green action color.",
+      "Real farm and packing photography in large rounded frames.",
+      "Montserrat ExtraBold headlines over Be Vietnam Pro body text.",
+      "Pill-shaped actions and chips; 12px cards; 20px photo frames.",
+      "Signature motion: word-flip headlines, 3D tilt cards with glare, drifting fruit orbs, scroll reveals, shimmer on the key headline phrase.",
+      "Soft, green-tinted ambient shadows; a dark \"night field\" footer closes every page."
+    ],
+    "rules": [
+      {
+        "name": "The One Green Voice Rule",
+        "body": "Every clickable call to action is Orchard Green, or white on dark bands. Lime highlights and fruit tones decorate; they never become a button.",
+        "section": "colors"
+      },
+      {
+        "name": "The Token-Only Green Rule",
+        "body": "The brand green changes only through `--color-primary*` / `--color-accent*` in `src/styles/global.css`. No component hard-codes a green hex.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fruit-As-Garnish Rule",
+        "body": "Dragon Fruit Pink and Harvest Sun appear only in decorative orbs, rings and icon washes, never as text or a filled surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Diacritic Headroom Rule",
+        "body": "No text below 14px (`--text-xs`). Body line-height 1.7 and heading line-height of at least 1.25 are minimums, so marks like ễ, ậ and Ể never clip or touch the line above. Background-clipped text (shimmer) gets extra block padding for the same reason.",
+        "section": "typography"
+      },
+      {
+        "name": "The Eyebrow-Head-Lead Rule",
+        "body": "Every section opens with the same trio: uppercase eyebrow with lime rule, Montserrat headline, Stem Grey lead.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lift-On-Touch Rule",
+        "body": "Surfaces are calm at rest. Lift, tilt, glare and deeper shadow appear only in response to the pointer or scroll.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do take every color from the `--color-*` tokens in `src/styles/global.css`, and change the brand green only there.",
+      "Do build every card with the shared `Card` component on the 12px `--radius-card`.",
+      "Do open sections with eyebrow → headline → lead, and alternate Paper White and Morning Mist bands.",
+      "Do use real farm, packing and carton photography in 20px-radius frames.",
+      "Do carry the signature motion (word-flip headlines, tilt + glare cards, scroll reveals, parallax photos) onto new pages, and keep every hidden state behind `prefers-reduced-motion: no-preference`.",
+      "Do keep text at 14px or larger with the established line heights so Vietnamese diacritics have room.",
+      "Do design every string at both Vietnamese and English lengths."
+    ],
+    "donts": [
+      "Don't hard-code green hex values in components or introduce a second action color.",
+      "Don't use Dragon Fruit Pink or Harvest Sun for text, buttons or filled surfaces.",
+      "Don't let one-shot reveal animations fill `forwards`/`both`; use `backwards`, or Safari paints the 3D layers blank while scrolling.",
+      "Don't set text below 14px or tighten heading line-height under 1.25.",
+      "Don't use square corners on actions; buttons, chips and tags are always pills."
+    ]
+  }
+}
